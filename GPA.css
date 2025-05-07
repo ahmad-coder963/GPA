@@ -101,9 +101,12 @@ p {
     
   }
 #summitbtn{
-  /* align-items: center; */
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  left: 0; /* إعادة تعيين القيمة السابقة */
+  display: block;
+  margin: 20px auto 0; /* 20px للأعلى | auto للتوسيط الأفقي */
+  width: 80%; /* جعل الزر أوسع */
+  max-width: 200px; /* تحديد عرض أقصى */
 }
   input[type="number"],
   button {
