@@ -101,7 +101,9 @@ p {
     
   }
 #summitbtn{
-  align-items: center;
+  /* align-items: center; */
+  left: 50%;
+  transform: translateX(-50%);
 }
   input[type="number"],
   button {
