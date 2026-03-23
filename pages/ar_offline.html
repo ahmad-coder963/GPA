@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>صفحة الدخول</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/bootstrap-rtl.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../css/metisMenu.min.css" rel="stylesheet">
+    
+    <!-- Custom Fonts -->
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">  
+<!--    <link href="../css/roboto.min.css" rel="stylesheet">-->
+    <link href="../css/material.min.css" rel="stylesheet">
+    <link href="../css/offline.css" rel="stylesheet" type="text/css">
+    <link href="../css/kh-modern.css" rel="stylesheet" type="text/css">
+    <style>
+    @font-face{
+        font-family: NotoKufiArabic-Regular; 
+        src: url(../fonts/NotoKufiArabic-Bold.ttf) format('truetype');
+    }
+
+    body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 { 
+        font-family: 'NotoKufiArabic-Regular';
+    }
+
+    </style>
+</head>
+
+<body class="kh-auth">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="login-panel panel panel-danger">
+                    <div class="panel-heading">
+                        <h1 style="color: white;text-align:center;"> غير متصل بالمخدم</h1> 
+                    </div>
+                    <div class="panel-body">
+                        <form role="form">
+                            <fieldset id="buttonlist"> 
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>   
+        <div class="row">
+            <div style="position: fixed; bottom:10px ;left:10px; "> 
+                <a onclick="SendACommand('AC=acAbout')" class="btn btn-primary btn-fab" style="font-size: 35px;padding-top: 5px;">?</a>
+            </div>
+        </div> 
+    </div>
+
+    <!-- jQuery -->
+    <script src="../js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../js/metisMenu.min.js"></script>  
+     <script src="../js/material.min.js"></script> 
+    <script src="../js/offline.js"></script> 
+	 <script>
+               $(document).ready(function () {
+                   // This command is used to initialize some elements and make them work properly
+                   $.material.init();
+               });
+    </script>
+</body>
+
+</html>

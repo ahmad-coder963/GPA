@@ -1,0 +1,48 @@
+
+.login-panel{
+    margin-top: 25%;
+}
+body {
+    background-color: #DDDDDD;
+    background:URL('../Icon/wall.png');
+    background-repeat:repeat-y;
+    background-size:cover;
+    background-position:center -75px;
+    overflow-y: hidden ! important;
+    overflow-x: hidden ! important;
+}
+/*
+.btn-success:not(.btn-link):not(.btn-flat) {
+    background-color: #f0a92c
+}
+.btn-success:hover:not(.btn-link):not(.btn-flat) {
+   background-color: #f0a92c 
+}*/
+a {
+            color: white; 
+}
+h1 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+}
+
+.half-left  img,
+.half-right img {
+  height: auto;
+  width: 100%;
+}
+@media (min-width: 481px) {
+  .half-left,
+  .half-right {
+    overflow: hidden;
+    padding: 0;
+    position: responsive;
+  }
+  .half-left  > .container,
+  .half-right > .container {
+    position: absolute;
+    top: 0;
+  }
+  .half-left  > .container { right: 0;}
+  .half-right > .container { left: 0; }
+}

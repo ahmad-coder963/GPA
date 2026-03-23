@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Singin</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet"> 
+
+    <!-- MetisMenu CSS -->
+    <link href="../css/metisMenu.min.css" rel="stylesheet">
+    
+    <!-- Custom Fonts -->
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">  
+    <link href="../css/roboto.min.css" rel="stylesheet">
+    <link href="../css/material.min.css" rel="stylesheet">
+    <link href="../css/Login.css" rel="stylesheet" type="text/css">
+    <link href="../css/kh-modern.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="kh-auth">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-13">
+                <div class="" style="max-height:350px;overflow: auto;">
+                        <ul class="list-group checked-list-box">
+                            <li class="list-group-item" data-style="button">
+                                <table class="table">
+                                    <thead>
+<!--                                        حجم الخط-->
+                                    </thead>
+                                    <tr id="buttonlist" >
+                                    </tr>
+                                </table>
+                            </li>
+                            
+                        </ul>
+               </div> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="login-panel panel panel-primary" >
+                    <div class="panel-heading">
+                        <h1 class="logh1" >Open Database</h1>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form">
+                            <fieldset>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="DataBase Name" name="databasename" id="databasename"  readonly="">
+                                </div>                                
+                                <div class="form-group">
+                                    <input class="form-control " placeholder="User Name" name="username" id="username" type="email" autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control " placeholder="Password" name="password" id="password" type="password" value="">
+                                </div>
+                                <div class="form-group"> 
+                                    <a onclick="Login()" class="btn btn-lg btn-default btn-block">Sign In</a>
+                                    <a onclick="SendACommand('AC=acOpen')" class="btn btn-lg btn-default btn-block">Change DataBase</a>  
+                                </div>
+								
+                                <!-- Change this to a button or input when using this as a form -->
+                                
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <div class="row">
+            <div style="position: fixed; bottom:10px ;left:10px; "> 
+                <a onclick="SendACommand('AC=acAbout')" class="btn btn-primary btn-fab" style="font-size: 35px;padding-top: 5px;">?</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../js/metisMenu.min.js"></script> 
+    <script src="../js/Login.js"></script>
+     <script src="../js/material.min.js"></script> 
+	 <script>
+               $(document).ready(function () {
+                   // This command is used to initialize some elements and make them work properly
+                   $.material.init();
+               });
+    </script>
+</body>
+
+</html>

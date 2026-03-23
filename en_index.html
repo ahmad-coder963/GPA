@@ -1,0 +1,2532 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+		<title>Al-Khazen</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+		<!--<link rel="stylesheet" href="css/style_ar.css" media="screen" />--> 
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/simple-sidebar.css" rel="stylesheet"> 
+		<link rel="stylesheet" href="css/jquery-ui.css" media="screen" />
+		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">   
+		 <link href="css/roboto.min.css" rel="stylesheet">
+        <link href="css/material.min.css" rel="stylesheet">
+<!--        <link href="css/ripples.min.css" rel="stylesheet">-->
+		<link href="css/styles.css" rel="stylesheet"> 
+		<link href="css/kh-modern.css" rel="stylesheet">
+	</head>
+<body onLoad="goforit()" class="kh-theme"> 
+    <div class="kh-bg-layer gradient" aria-hidden="true"></div>
+    <div class="kh-bg-layer grid" aria-hidden="true"></div>
+    <div class="kh-bg-layer glow" aria-hidden="true"></div>
+    <div class="kh-bg-layer particles" aria-hidden="true">
+        <span class="particle p1"></span>
+        <span class="particle p2"></span>
+        <span class="particle p3"></span>
+        <span class="particle p4"></span>
+        <span class="particle p5"></span>
+        <span class="particle p6"></span>
+        <span class="particle p7"></span>
+        <span class="particle p8"></span>
+        <span class="particle p9"></span>
+        <span class="particle p10"></span>
+        <span class="particle p11"></span>
+        <span class="particle p12"></span>
+    </div>
+    <div class="kh-bg-layer chart-lines" aria-hidden="true">
+        <svg viewBox="0 0 900 420" preserveAspectRatio="none">
+            <path class="kh-chart-line line-1" d="M10,320 C120,280 180,220 260,240 C340,260 410,180 490,170 C560,160 650,110 760,140 C820,160 870,120 890,80" />
+            <path class="kh-chart-line line-2" d="M10,360 C140,330 210,300 290,270 C380,230 440,260 520,230 C600,200 690,210 780,180 C840,160 875,140 895,120" />
+            <path class="kh-chart-line line-3" d="M10,280 C120,250 210,260 290,210 C370,160 430,180 520,150 C610,120 690,130 780,90 C840,70 880,50 895,40" />
+        </svg>
+    </div>
+<div id="top-nav" class="navbar navbar-default navbar-fixed-top effect1">
+  <div class="container">
+    <div class="navbar-header">
+        <div class="navbar-toggle navbar-left " role="search" style="">
+            <img src="./gen_images/logo_bro.png" class="img-fluid" alt="" style="height: 35px;">
+        </div>
+        <div class="navbar-toggle navbar-left " role="search" style="margin-top:0;margin-bottom:0;margin-right:0;">
+            <div class="Date_Clock ">
+                <div class="Clock">
+                    <script src="js/date.js"></script>
+                </div>
+            </div> 
+        </div>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+           <i class=" glyphicon glyphicon-th-list"></i>   <span class="icon-toggle caret"></span>
+	  </button>
+	  <a href="#"  class="navbar-brand " aria-label="Left Align" id="menu-toggle"><span class="logo glyphicon glyphicon-align-justify"></span><strong > Main Menu</strong></a>
+    
+    </div>
+		   
+      <div class="navbar-collapse collapse">
+      <!--  <form class="navbar-form navbar-left " role="search" style="">
+              <img src="./gen_images/Swess_logo.png" class="img-fluid" alt="" style="height: 50px;">
+          </form>-->
+
+          <form class="navbar-form navbar-left " role="search">
+              <div class="Date_Clock ">
+                  <div class="Clock">
+                  <script src="js/date.js"></script></div>
+              </div>
+              <!--<div class="Date"><script src="js/date.js"></script></div> </div>-->
+          </form>
+
+          <form class="navbar-form navbar-left	" role="search">
+              <div class="Date_Clock "> <div class="Clock"><span id="clock"> </span></div></div>
+          </form>
+          <form class="navbar-form navbar-left	" role="search" style="margin-top: 0;margin-bottom: 0;">
+              <div class="btn-group" style="margin-top: 4px; margin-right: 8px;">
+                  <button type="button" id="themeToggle" class="btn btn-default kh-theme-toggle" title="Toggle theme" aria-pressed="false">
+                      <i class="fa fa-sun-o"></i>
+                      <span class="kh-theme-toggle__label">Light</span>
+                  </button>
+              </div>
+              <div class="form-group">
+                  <div class="btn-group" id="searchdiv">
+                      <input type="text" class="form-control" placeholder="Search" id="SearchBox" value="" style="">
+                      <span id="searchclear" class="fa fa-times"></span>
+                  </div>
+              </div>
+              <div class="btn-group">
+                  <button type="button" class="btn btn-success" id="SearchBtn" onClick="Searcher()" value="" style="padding: 7px 10px;">
+                      <span class="glyphicon glyphicon-search"></span>
+                      <span style="font-family: 'Roboto'; " id="span">  Accounts</span>
+                  </button>
+                  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="padding: 7px 10px;">
+                      <span class="caret"></span>
+                      <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                      <li><a href="#" onclick="chane(this)" id="h1"> Accounts </a> </li>
+                      <li><a href="#" onclick="chane(this)" id="h2"> Categories</a></li>
+                      <li><a href="#" onclick="chane(this)" id="h3"> Sellers</a></li>
+                      <!--<li class="divider" style="background-color: #009688;"></li>-->
+                    <!--  <li><a href="#" onclick="chane(this)" id="h4"> Archives</a></li>-->
+                  </ul>
+              </div>
+          </form>
+        <ul class="nav navbar-nav navbar-right"> 
+            <li class="dropdown">
+                <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#" id="username">
+                    <i class="glyphicon glyphicon-user"></i>  <span class="caret"></span>
+                </a>
+                <ul id="g-account-menu" class="dropdown-menu" role="menu">
+                    <li><a href="#" onClick="SendACommand('AC=acDesktopConfig')"><strong>Profile <i class="fa fa-fw fa-user fa-lg"></i></strong></a></li>
+                    <li><a href="#" data-toggle="modal" onClick="SendACommand('AC=acHelp, ,true')"><strong>help <i class="fa fa-fw fa-question-circle fa-lg"></i></strong></a></li>
+                </ul>
+            </li>
+        </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown" id="Ramusage"> 
+              </li>
+          </ul>
+      </div> 
+  </div><!-- /container -->
+</div>
+     
+<div id="wrapper" class="toggled">
+		 <!-- sidebar -->
+		   <div id="sidebar-wrapper">
+				<ul class="sidebar-nav"> 
+					<li class="sidebar-brand" style="height: 225px; padding-left: 25px;padding-top: 85px;size: 50px;">
+						<a href="#">
+						<img src="./gen_images/logo_bro.png" class="img-responsive  img-rounded" alt="Responsive image" style="width: 80%;"/>
+						</a>
+						</li> 
+					<li class="broc" style= "padding-top: 33px;">
+						<a href="#Start"class="broc" onclick="myfs(this);"> <i class="fa fa-fw fa-dashboard"></i>     Start</a>
+					</li>
+					<li class="broc">
+						<a href="#" class="broc" onclick="myfd(this);" ><i class="fa fa-fw fa-edit"></i>    Define</a>
+					</li>
+					<li class="broc">
+						<a href="#" class="broc" onclick="myfw(this);" ><i class="fa fa-fw fa-bar-chart-o"></i>   Work Flow</a>
+					</li> 
+				</ul>
+			</div>
+    <div class="page-content-wrapper">
+    <!-- Main -->
+        <div class="container tempe"  >
+             
+          <!-- lower section -->
+	        <div class="row">
+     
+		        <div class="col-md-13">
+                    <br><br><br>
+			<div class="panel panel-white" id="Start" style="max-height: 100%;min-height:545px;" >
+				<!--<div class="panel-heading">  <h3 class="panel-title">  Start Menu </h3>-->
+				<!--</div>-->
+				<div class="panel-body">
+					<div class="container ">
+						<ul class="nav nav-tabs" id="myTab">
+						  <li><a href="#messages" data-toggle="tab"><i class="glyphicon glyphicon-comment"></i><strong> Reminding messages</strong></a></li>
+						  <li class="active"><a href="#favorites" onclick="SendACommand('AC=acRefreshFav,h1,1')" data-toggle="tab"><i class="glyphicon glyphicon-heart"></i> <strong>My Favorites</strong></a></li>
+						  <li><a href="#settings" data-toggle="tab"><i class="glyphicon glyphicon-cog"></i> <strong>Settings</strong></a></li>
+						</ul>
+						
+						<div class="tab-content">
+                                     
+						  <div class="tab-pane" id="messages">
+						   <div class="bs-docs-section">
+								<div class="row">
+									<div class="col-lg-12">
+										<div class="">
+											<h1 name="forms">Reminder Messeges</h1>
+										</div>
+									</div>
+								</div> 
+								 <div class="row" id="messagelist">
+							</div>
+						  </div>
+                    </div>
+							<div class="tab-pane active" id="favorites">
+								<div class="bs-docs-section">
+									<div class="row">
+										<div class="col-lg-12">
+											<div class="">
+												<h2 name="forms">Shortcuts <span class="pull-right" style="padding-right:10%" > Accounts <i class="fa fa-refresh" onclick="SendACommand('AC=acRefreshFav,h1,1')" style="cursor:pointer"></i></span>  </h2>
+											</div>
+										</div>
+									</div> 
+								</div>
+								<div class="list-group">
+									<div class="row">
+										<div id="favoriteslist" style="min-height: 400px;max-width:800px;min-width:350px;" class="jumbotron text-center pull-left col-xs-7">
+
+										</div>
+										<div id="accountlist" style="min-height: 400px;" class="jumbotron pull-right col-xs-4">
+
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane" id="settings">
+								<div class="bs-docs-section">
+									<div class="row">
+										<div class="col-lg-12">
+											<div class="">
+												<h1 id="forms">Settings</h1>
+											</div>
+										</div>
+									</div> 
+								</div>
+							  
+								<div class="row">
+										<div class="col-xs-6"> 
+											 <div class="well" style="max-height:450px;overflow: auto;">
+												<ul class="list-group checked-list-box" >
+												 <li class="list-group-item" data-style="button"   >
+													  <h4 class=""> <i class="fa fa-chevron-right"> </i> Search Box <i class="fa fa-eraser"></i> Clear SearchBox
+													 <div class="pull-right">
+														 <div class="togglebutton">
+															<label onclick="update(this)">
+																<input type="checkbox" checked>
+															</label>
+														</div>
+													 </div>
+													  </h4>
+												 </li>
+													<hr/>
+												 <li class="list-group-item" data-color="success"  >
+												  <h4 class=""> <i class="fa fa-chevron-right"></i> Clock Style <i class="fa fa-clock-o"></i> 24h - AM/PM
+													 <div class="pull-right">
+														 <div class="togglebutton">
+															<label onclick="update1(this)">
+																<input type="checkbox" checked>
+															</label>
+														</div>
+													 </div>
+												  </h4>
+												 </li>
+													<hr/>
+                                                <li class="list-group-item" >
+                                                    <table class="table">
+                                                        <tr>
+                                                            <td style="border:hidden">  <a class="btn btn-raised center-block" onclick="SendACommand('AC=acFavAccounts')"> Favorites <i class="fa fa-heart-o"></i></a></td>
+                                                        </tr>
+                                                    </table>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <table class="table">
+                                                        <tr>
+                                                            <td style="border:hidden">  <a class="btn btn-raised center-block" onclick="SendACommand('AC=acDesktopRemindersSettings')"> Reminders <i class="fa fa-cog"></i></a></td>
+                                                        </tr>
+                                                    </table>
+                                                </li>
+                                            </ul>
+										</div>
+									</div> 
+                                    <div class="col-lg-6">
+                                        <div class="well" style="max-height:350px;overflow: auto;">
+                                            <ul class="list-group checked-list-box">
+                                                <li class="list-group-item" data-style="button">
+                                                    <table class="table">
+                                                        <thead>Font Size
+                                                        </thead>
+                                                        <tr>
+                                                            <td style="border:hidden">  <a class="btn btn-raised center-block" onclick="Incval()"> + <i class="fa fa-font fa-lg"></i></a></td>
+                                                            <td style="border:hidden">  <a class="btn btn-raised center-block" onclick="Dncval()"> - <i class="fa fa-font fa-lg"></i></a></td>
+                                                        </tr> 
+                                                    </table>
+                                                    </li>
+                                                </ul>
+                                        </div>
+                                        </div>
+								</div> 
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	<div class="panel panel-white modal" id="Define" >
+	  <div class="panel-body">
+	   <div class="container ">
+			<ul class="nav nav-tabs" >
+			  <li class="active"><a href="#profile1" data-toggle="tab"><i class="fa fa-line-chart"></i><strong> Accounting  </strong></a></li>
+			  <li><a href="#messages1" data-toggle="tab"><i class="fa fa-credit-card"></i><strong> Stores </strong></a></li> 
+			</ul>
+			
+			<div class="tab-content">
+			  <div class="tab-pane active" id="profile1" style="padding-top: 14px;" > 
+				
+				  
+				 <table border="0" cellpadding="0" cellspacing="0" class="MainTable">
+	  <tr>
+		<td width="20" align="left">&nbsp;</td>  
+		
+		<td width="238" align="left" valign="top">
+		  <fieldset style="text-align: left; direction: ltr; word-spacing:0; text-indent: 0; line-height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding: 0">
+			<legend align="left"> <font class="Titles" style="">Accounts Palette</font></legend>
+			  <table width="238" border="0" cellpadding="0" cellspacing="0" dir="ltr">
+			  
+				<tr><td height="12"></td></tr>
+				
+				<tr>
+				
+				  <td width="50" valign="top" align="left">
+				   <div align="center" onMouseOver="ChangeImageWhenMouseUp('AddAcc',true);ChangeSpanClass('S5',true)" onMouseOut="ChangeImageWhenMouseUp('AddAcc',false);ChangeSpanClass('S5',false)" onClick="SendACommand('AC=acAddGeneralAccount')">
+				   <span style="margin-right: 0; margin-top: 0; margin-bottom: 0; cursor:pointer">
+				   <img border="0" src="./gen_images/AddAcc.gif" width="30" height="23" name="AddAcc">
+				   </span>
+				   </div>
+				  </td>
+				  <td width="0">&nbsp;</td>
+				  <td valign="middle" align="left">
+				   <div align="left" onMouseOver="ChangeImageWhenMouseUp('AddAcc',true);ChangeSpanClass('S5',true)" onMouseOut="ChangeImageWhenMouseUp('AddAcc',false);ChangeSpanClass('S5',false)" onClick="SendACommand('AC=acAddGeneralAccount')">
+				   <span style="margin-right: 0; margin-top: 0; margin-bottom: 0; cursor:pointer">
+				   <span class="TextStyle" id='S5'>Add a General Account</span> 
+				   </span>
+				   </div>
+				  </td>
+				   
+				</tr>
+				 
+				<tr><td height="8"></td></tr>
+				
+				<tr>
+				
+				  <td width="50" valign="top" align="left">
+				   <div align="center" onMouseOver="ChangeImageWhenMouseUp('AddClint',true);ChangeSpanClass('S6',true)" onMouseOut="ChangeImageWhenMouseUp('AddClint',false);ChangeSpanClass('S6',false)" onClick="SendACommand('AC=acAddCustomerAccount')">
+				   <span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer">
+				   <img border="0" src="./gen_images/AddClint.gif" width="30" height="23" name="AddClint">			   
+				   </span>
+				   </div>
+				  </td>
+				  <td width="0">&nbsp;</td>
+				  <td valign="middle" align="left">
+				   <div align="left" onMouseOver="ChangeImageWhenMouseUp('AddClint',true);ChangeSpanClass('S6',true)" onMouseOut="ChangeImageWhenMouseUp('AddClint',false);ChangeSpanClass('S6',false)" onClick="SendACommand('AC=acAddCustomerAccount')">
+				   <span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer"> 
+				   <span class="TextStyle" id="S6">Add a Customer Account</span>
+				   </span>
+				   </div>
+				  </td>
+				   
+				</tr>
+
+				<tr><td height="8"></td></tr>
+				
+				<tr>
+				
+				  <td width="50" valign="top" align="left">
+				   <div align="center" onMouseOver="ChangeImageWhenMouseUp('AddVender',true);ChangeSpanClass('S7',true)" onMouseOut="ChangeImageWhenMouseUp('AddVender',false);ChangeSpanClass('S7',false)" onClick="SendACommand('AC=acAddVendorAccount')">
+				   <span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer">
+				   <img border="0" src="./gen_images/AddVender.gif" width="30" height="23" name="AddVender">
+				   </span>
+				   </div>
+				  </td>
+				  <td width="0">&nbsp;</td>
+				  <td valign="middle" align="left">
+				   <div align="left" onMouseOver="ChangeImageWhenMouseUp('AddVender',true);ChangeSpanClass('S7',true)" onMouseOut="ChangeImageWhenMouseUp('AddVender',false);ChangeSpanClass('S7',false)" onClick="SendACommand('AC=acAddVendorAccount')">
+				   <span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer">
+				   <span class="TextStyle" id='S7'>Add a Provider Account</span>
+				   </span>
+				   </div>
+				  </td>
+				   
+				</tr>
+
+
+				<tr><td height="8"></td></tr>
+				
+				<tr>
+				
+				  <td width="50" valign="top" align="left">
+				   <div align="center" onMouseOver="ChangeImageWhenMouseUp('AddSeals',true);ChangeSpanClass('S8',true)" onMouseOut="ChangeImageWhenMouseUp('AddSeals',false);ChangeSpanClass('S8',false)" onClick="SendACommand('AC=acAddSalesManAccount')">
+				   <span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer">
+				   <img border="0" src="./gen_images/AddSeals.gif" width="30" height="23" name="AddSeals">
+				   </span>
+				   </div>
+				  </td>
+				  <td width="0">&nbsp;</td>
+				  <td valign="middle" align="left">
+				   <div align="left" onMouseOver="ChangeImageWhenMouseUp('AddSeals',true);ChangeSpanClass('S8',true)" onMouseOut="ChangeImageWhenMouseUp('AddSeals',false);ChangeSpanClass('S8',false)" onClick="SendACommand('AC=acAddSalesManAccount')">
+				   <span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer">
+				   <span class="TextStyle" id='S8'>Add a Salesman Account</span>
+				   </span>
+				   </div>
+				  </td>
+				   
+				</tr>
+
+
+				<tr><td height="8"></td></tr>
+				
+				<tr>
+				
+				  <td width="50" valign="top" align="left">
+				   <div align="center" onMouseOver="ChangeImageWhenMouseUp('AddBank',true);ChangeSpanClass('S9',true)" onMouseOut="ChangeImageWhenMouseUp('AddBank',false);ChangeSpanClass('S9',false)" onClick="SendACommand('AC=acAddBankAccount')">
+				   <span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer">
+				   <img border="0" src="./gen_images/AddBank.gif" width="30" height="23" name="AddBank">
+				   </span>
+				   </div>
+				  </td>
+				  <td width="0">&nbsp;</td>
+				  <td valign="middle" align="left">
+				   <div align="left" onMouseOver="ChangeImageWhenMouseUp('AddBank',true);ChangeSpanClass('S9',true)" onMouseOut="ChangeImageWhenMouseUp('AddBank',false);ChangeSpanClass('S9',false)" onClick="SendACommand('AC=acAddBankAccount')">
+				   <span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer">
+				   <span class="TextStyle" id='S9'>Add a Bank Account</span>
+				   </span>
+				   </div>
+				  </td>
+				   
+				</tr>
+
+
+				<tr><td height="8"></td></tr>
+				
+				<tr>
+				
+				  <td width="50" valign="top" align="left">
+				   <div align="center" onMouseOver="ChangeImageWhenMouseUp('AddEnd',true);ChangeSpanClass('S10',true)" onMouseOut="ChangeImageWhenMouseUp('AddEnd',false);ChangeSpanClass('S10',false)" onClick="SendACommand('AC=acAddFinalAccount')">
+				   <span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer">
+				   <img border="0" src="./gen_images/AddEnd.gif" width="30" height="23" name="AddEnd">
+				   </span>
+				   </div>
+				  </td>
+				  <td width="0">&nbsp;</td>
+				  <td valign="middle" align="left">
+				   <div align="left" onMouseOver="ChangeImageWhenMouseUp('AddEnd',true);ChangeSpanClass('S10',true)" onMouseOut="ChangeImageWhenMouseUp('AddEnd',false);ChangeSpanClass('S10',false)" onClick="SendACommand('AC=acAddFinalAccount')">
+				   <span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer">
+				   <span class="TextStyle" id='S10'>Add a Final Account</span>
+				   </span>
+				   </div>
+				  </td>
+				   
+				</tr>
+
+				<tr><td height="70"></td></tr>
+		  </table>
+		  </fieldset>		
+			
+			</td>
+		
+		<td width="20" align="left">&nbsp;</td>
+		
+		<td  width="290" align="left" valign="top">
+		
+		<table width="290" border="0" align="left" cellpadding="0" cellspacing="0" id="table1">
+	<!-- Here the First Entry !-->	  
+		  <tr>
+			<td width="238" height="64" align="left" valign="top" dir="ltr">
+				<fieldset style="text-align: left; direction: ltr; word-spacing: 0; text-indent: 0; line-height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding: 0">
+						  <legend align="left"> <font class="Titles">Currencies Palette</font></legend>
+						  <table width="238" height="46" border="0" cellpadding="0" cellspacing="0" dir="ltr">
+							<tr>
+							  <td align="left" width="50">
+									 <div align="center" onMouseOver="ChangeImageWhenMouseUp('AddCurrency',true);ChangeSpanClass('S30',true)" onMouseOut="ChangeImageWhenMouseUp('AddCurrency',false);ChangeSpanClass('S30',false)" onClick="SendACommand('AC=acAddCurrency')">
+									 <span style="margin-right: 0; margin-top: 0; margin-bottom: 0; margin-left:0; cursor:pointer">
+									   <img src="./gen_images/AddCurrency.gif" name="AddCurrency" width="30" height="23" border="0">
+									 </span>							     
+									 </div>
+							  </td>
+							  <td width="0">&nbsp;</td>
+							  <td>
+									 <div align="left" onMouseOver="ChangeImageWhenMouseUp('AddCurrency',true);ChangeSpanClass('S30',true)" onMouseOut="ChangeImageWhenMouseUp('AddCurrency',false);ChangeSpanClass('S30',false)" onClick="SendACommand('AC=acAddCurrency')"><span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer"><span class="TextStyle" id="S30">Add a Currency</span></span></div>
+							  </td>				  
+							</tr>
+				</table>
+				</fieldset>
+			</td>
+		  </tr>
+		  
+	  
+	<!-- Here the Second Entry !-->
+	<tr>
+			<td height="2">&nbsp;</td>
+		  </tr>
+		  
+
+		  <tr>
+			<td width="238" height="64" align="left" valign="top" dir="ltr">
+				<fieldset style="text-align: left; direction: ltr; word-spacing: 0; text-indent: 0; line-height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding: 0">
+				  <legend align="left"><font class="Titles">Advanced Accounting Palette</font></legend>
+						  <table width="238" height="46" border="0" cellpadding="0" cellspacing="0" dir="ltr">
+							<tr>
+							  <td align="center" width="50">
+									 <div align="center" onMouseOver="ChangeImageWhenMouseUp('AddCos',true);ChangeSpanClass('S31',true)" onMouseOut="ChangeImageWhenMouseUp('AddCos',false);ChangeSpanClass('S31',false)" onClick="SendACommand('AC=acAddCostCenter')">
+									 <span style="margin-right: 0; margin-top: 0; margin-bottom: 0; margin-left:0; cursor:pointer">
+									 <img border="0" src="./gen_images/AddCos.gif" width="30" height="23" name="AddCos">
+									 </span>							     
+									 </div>
+							  </td>
+							  <td width="0">&nbsp;</td>
+							  <td>
+								<div align="left" onMouseOver="ChangeImageWhenMouseUp('AddCos',true);ChangeSpanClass('S31',true)" onMouseOut="ChangeImageWhenMouseUp('AddCos',false);ChangeSpanClass('S31',false)" onClick="SendACommand('AC=acAddCostCenter')"><span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer"><span class="TextStyle" id="S31">Add a Cost Center</span></span></div>
+							  </td>				  
+							</tr>
+				</table>
+				</fieldset>
+			</td>
+		  </tr>
+	  
+	<!-- Here the Third Entry !-->
+	<tr>
+			<td height="2" align="left">&nbsp;</td>
+		  </tr>
+
+		  <tr>
+			<td width="238" height="64" align="left" valign="top" dir="ltr">
+				<fieldset style="text-align: left; direction: ltr; word-spacing: 0; text-indent: 0; line-height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding: 0">
+				  <legend align="left"><font class="Titles">Configuration Palette</font></legend>
+						  <table width="238" border="0" cellpadding="0" cellspacing="0" dir="ltr">
+							<tr><td height="10"></td></tr>
+							<tr>
+							  <td align="center" width="50">
+									 <div align="center" onMouseOver="ChangeImageWhenMouseUp('NewCategory',true);ChangeSpanClass('S32',true)" onMouseOut="ChangeImageWhenMouseUp('NewCategory',false);ChangeSpanClass('S32',false)" onClick="SendACommand('AC=acAddGroupOfAccounts')">
+									 <span style="margin-right: 0; margin-top: 0; margin-bottom: 0; margin-left:0; cursor:pointer">
+									 <img border="0" src="./gen_images/NewCategory.gif" width="30" height="23" name="NewCategory">
+									 </span>							     
+									 </div>
+							  </td>
+							  <td width="0">&nbsp;</td>
+							  <td>
+								<div align="left" onMouseOver="ChangeImageWhenMouseUp('NewCategory',true);ChangeSpanClass('S32',true)" onMouseOut="ChangeImageWhenMouseUp('NewCategory',false);ChangeSpanClass('S32',false)" onClick="SendACommand('AC=acAddGroupOfAccounts')"><span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer"><span class="TextStyle" id="S32">Add a Category of Accounts</span></span></div>
+							  </td>				  
+							</tr>
+							
+							<tr><td height="5"></td></tr>
+													
+							<tr>
+							  <td align="center" width="50">
+									 <div align="center" onMouseOver="ChangeImageWhenMouseUp('Addarea',true);ChangeSpanClass('S33',true)" onMouseOut="ChangeImageWhenMouseUp('Addarea',false);ChangeSpanClass('S33',false)" onClick="SendACommand('AC=acAddArea')">
+									 <span style="margin-right: 0; margin-top: 0; margin-bottom: 0; margin-left:0; cursor:pointer">
+									 <img border="0" src="./gen_images/Addarea.gif" width="30" height="23" name="Addarea">
+									 </span>							     
+									 </div>
+							  </td>
+							  <td width="0">&nbsp;</td>
+							  <td>
+								<div align="left" onMouseOver="ChangeImageWhenMouseUp('Addarea',true);ChangeSpanClass('S33',true)" onMouseOut="ChangeImageWhenMouseUp('Addarea',false);ChangeSpanClass('S33',false)" onClick="SendACommand('AC=acAddArea')"><span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer"><span class="TextStyle" id="S33">Add Area</span></span></div>
+							  </td>				  
+							</tr>
+
+							<tr><td height="5"></td></tr>
+							<tr>
+							  <td align="center" width="50">
+									 <div align="center" onMouseOver="ChangeImageWhenMouseUp('NewDocKind',true);ChangeSpanClass('S34',true)" onMouseOut="ChangeImageWhenMouseUp('NewDocKind',false);ChangeSpanClass('S34',false)" onClick="SendACommand('AC=acDefineADocument')">
+									 <span style="margin-right: 0; margin-top: 0; margin-bottom: 0; margin-left:0; cursor:pointer">
+									 <img border="0" src="./gen_images/NewDocKind.gif" width="30" height="23" name="NewDocKind">
+									 </span>							     
+									 </div>
+							  </td>
+							  <td width="0">&nbsp;</td>
+							  <td>
+								<div align="left" onMouseOver="ChangeImageWhenMouseUp('NewDocKind',true);ChangeSpanClass('S34',true)" onMouseOut="ChangeImageWhenMouseUp('NewDocKind',false);ChangeSpanClass('S34',false)" onClick="SendACommand('AC=acDefineADocument')"><span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer"> <span class="TextStyle" id='S34'>Add Document</span></span></div>
+							  </td>				  
+							</tr>
+							<tr><td height="10"></td></tr>						
+				</table>
+				</fieldset>
+			</td>
+		  </tr>
+
+
+		</table>
+		
+		</td>
+			
+	  </tr>
+	</table>
+				  
+			  </div>
+			  <div class="tab-pane" id="messages1" style="padding-top: 14px;">
+				 
+				  
+				  <table border="0" cellpadding="0" cellspacing="0" class="MainTable">
+	  <tr>
+		<td width="20" align="left">&nbsp;</td>  
+		
+		<td width="238" align="left" valign="top">
+		  <fieldset style="text-align: left; direction: ltr; word-spacing:0; text-indent: 0; line-height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding: 0">
+			  <legend align="left"> <font class="Titles">Items Palette</font></legend>
+			  <table width="238" border="0" cellpadding="0" cellspacing="0" dir="ltr">
+			  
+				<tr><td height="12"></td></tr>
+				
+				<tr>
+									
+				  <td width="50" valign="top" align="left">
+				   <div align="center" onMouseOver="ChangeImageWhenMouseUp('AddArticl',true);ChangeSpanClass('S5',true)" onMouseOut="ChangeImageWhenMouseUp('AddArticl',false);ChangeSpanClass('S5',false)" onClick="SendACommand('AC=acAddGeneralArticle')">
+				   <span style="margin-right: 0; margin-top: 0; margin-bottom: 0; cursor:pointer">
+				   <img border="0" src="./gen_images/AddArticl.gif" width="30" height="23" name="AddArticl">
+				   </span>
+				   </div>
+				  </td>
+				  <td width="0">&nbsp;</td>
+				  <td valign="middle" align="left">
+				   <div align="left" onMouseOver="ChangeImageWhenMouseUp('AddArticl',true);ChangeSpanClass('S5',true)" onMouseOut="ChangeImageWhenMouseUp('AddArticl',false);ChangeSpanClass('S5',false)" onClick="SendACommand('AC=acAddGeneralArticle')">			  
+				   <span style="margin-right: 0; margin-top: 0; margin-bottom: 0; cursor:pointer">
+				   <span class="TextStyle" id='S5'>Add a General Item</span>
+				   </span>
+				   </div>
+				  </td>
+				   
+				</tr>
+				 
+				<tr><td height="8"></td></tr>
+				
+				<tr>
+				
+				  <td width="50" valign="top" align="left">
+				   <div align="center" onMouseOver="ChangeImageWhenMouseUp('AddRowmaterial',true);ChangeSpanClass('S6',true)" onMouseOut="ChangeImageWhenMouseUp('AddRowmaterial',false);ChangeSpanClass('S6',false)" onClick="SendACommand('AC=acAddRowMaterial')">
+				   <span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer">
+				   <img border="0" src="./gen_images/AddRowmaterial.gif" width="30" height="23" name="AddRowmaterial">
+				   </span>
+				   </div>
+				  </td>
+				  <td width="0">&nbsp;</td>
+				  <td valign="middle" align="left">
+				   <div align="left" onMouseOver="ChangeImageWhenMouseUp('AddRowmaterial',true);ChangeSpanClass('S6',true)" onMouseOut="ChangeImageWhenMouseUp('AddRowmaterial',false);ChangeSpanClass('S6',false)" onClick="SendACommand('AC=acAddRowMaterial')">			  
+				   <span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer"> 			   
+				   <span class="TextStyle" id="S6">Add a Row Material</span> 
+				   </span>
+				   </div>
+				  </td>
+				   
+				</tr>
+
+				<tr><td height="8"></td></tr>
+				
+				<tr>
+				
+				  <td width="50" valign="top" align="left">
+				   <div align="center" onMouseOver="ChangeImageWhenMouseUp('AddInmnifactoring',true);ChangeSpanClass('S7',true)" onMouseOut="ChangeImageWhenMouseUp('AddInmnifactoring',false);ChangeSpanClass('S7',false)" onClick="SendACommand('AC=acAddHalfManufacturedArticle')">
+				   <span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer">
+				   <img border="0" src="./gen_images/AddInmnifactoring.gif" width="30" height="23" name="AddInmnifactoring">
+				   </span>
+				   </div>
+				  </td>
+				  <td width="0">&nbsp;</td>
+				  <td valign="middle" align="left">
+				   <div align="left" onMouseOver="ChangeImageWhenMouseUp('AddInmnifactoring',true);ChangeSpanClass('S7',true)" onMouseOut="ChangeImageWhenMouseUp('AddInmnifactoring',false);ChangeSpanClass('S7',false)" onClick="SendACommand('AC=acAddHalfManufacturedArticle')">
+				   <span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer">
+				   <span class="TextStyle" id='S7'>Add a Half Manufactured Material</span>			   
+				   </span>
+				   </div>
+				  </td>
+				   
+				</tr>
+
+
+				<tr><td height="8"></td></tr>
+				
+				<tr>
+
+				  <td width="50" valign="top" align="left">
+				   <div align="center" onMouseOver="ChangeImageWhenMouseUp('AddGoods',true);ChangeSpanClass('S8',true)" onMouseOut="ChangeImageWhenMouseUp('AddGoods',false);ChangeSpanClass('S8',false)" onClick="SendACommand('AC=acAddGoodArticle')">
+				   <span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer">
+				   <img border="0" src="./gen_images/AddGoods.gif" width="30" height="23" name="AddGoods">
+				   </span>
+				   </div>
+				  </td>
+				  <td width="0">&nbsp;</td>
+				  <td valign="middle" align="left">
+				   <div align="left" onMouseOver="ChangeImageWhenMouseUp('AddGoods',true);ChangeSpanClass('S8',true)" onMouseOut="ChangeImageWhenMouseUp('AddGoods',false);ChangeSpanClass('S8',false)" onClick="SendACommand('AC=acAddGoodArticle')">			  
+				   <span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer">
+				   <span class="TextStyle" id='S8'>Add a Ready-Made Good</span>
+				   </span>
+				   </div>
+				  </td>
+				   
+				</tr>
+
+
+				<tr><td height="8"></td></tr>
+				
+				<tr>
+				
+				  <td width="50" valign="top" align="left">
+				   <div align="center" onMouseOver="ChangeImageWhenMouseUp('AddService',true);ChangeSpanClass('S9',true)" onMouseOut="ChangeImageWhenMouseUp('AddService',false);ChangeSpanClass('S9',false)" onClick="SendACommand('AC=acAddServiceArticle')">			  
+				   <span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer">
+				   <img border="0" src="./gen_images/AddService.gif" width="30" height="23" name="AddService">			   
+				   </span>
+				   </div>
+				  </td>
+				  <td width="0">&nbsp;</td>
+				  <td valign="middle" align="left">
+				   <div align="left" onMouseOver="ChangeImageWhenMouseUp('AddService',true);ChangeSpanClass('S9',true)" onMouseOut="ChangeImageWhenMouseUp('AddService',false);ChangeSpanClass('S9',false)" onClick="SendACommand('AC=acAddServiceArticle')">			  
+				   <span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer">
+				   <span class="TextStyle" id='S9'>Add a Service Item</span>			   
+				   </span>
+				   </div>
+				  </td>
+				   
+				</tr>
+
+
+				<tr><td height="8"></td></tr>
+				
+				<tr>
+				
+				  <td width="50" valign="top" align="left">
+				   <div align="center" onMouseOver="ChangeImageWhenMouseUp('AddArticleCarancy',true);ChangeSpanClass('S10',true)" onMouseOut="ChangeImageWhenMouseUp('AddArticleCarancy',false);ChangeSpanClass('S10',false)" onClick="SendACommand('AC=acAddCurrencyArtilce')">			  
+				   <span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer">
+				   <img border="0" src="./gen_images/AddArticleCarancy.gif" width="30" height="23" name="AddArticleCarancy">			   
+				   </span>
+				   </div>
+				  </td>
+				  <td width="0">&nbsp;</td>
+				  <td valign="middle" align="left">
+				   <div align="left" onMouseOver="ChangeImageWhenMouseUp('AddArticleCarancy',true);ChangeSpanClass('S10',true)" onMouseOut="ChangeImageWhenMouseUp('AddArticleCarancy',false);ChangeSpanClass('S10',false)" onClick="SendACommand('AC=acAddCurrencyArtilce')">			  
+				   <span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer">
+				   <span class="TextStyle" id='S10'>Add a Currency Material</span>			   
+				   </span>
+				   </div>
+				  </td>
+				   
+				</tr>
+
+				<tr><td height="8"></td></tr>
+				
+				<tr>
+			
+				  <td width="50" valign="top" align="left">
+				   <div align="center" onMouseOver="ChangeImageWhenMouseUp('AddBank2',true);ChangeSpanClass('S40',true)" onMouseOut="ChangeImageWhenMouseUp('AddBank2',false);ChangeSpanClass('S40',false)" onClick="SendACommand('AC=acAddConsignArticle')">			  
+				   <span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer">
+				   <img border="0" src="./gen_images/AddBank2.gif" width="30" height="23" name="AddBank2">			   
+				   </span>
+				   </div>
+				  </td>
+				  <td width="0">&nbsp;</td>
+				  <td valign="middle" align="left">
+				   <div align="left" onMouseOver="ChangeImageWhenMouseUp('AddBank2',true);ChangeSpanClass('S40',true)" onMouseOut="ChangeImageWhenMouseUp('AddBank2',false);ChangeSpanClass('S40',false)" onClick="SendACommand('AC=acAddConsignArticle')">	
+                       
+				   <span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer">
+                    <span class="TextStyle" id="S40">Add a Trust Item</span>
+				   </span>
+				   </div>
+				  </td>
+				   
+				</tr>
+
+				<tr><td height="8"></td></tr>
+				
+				<tr>
+		
+				  <td width="50" valign="top" align="left">
+				   <div align="center" onMouseOver="ChangeImageWhenMouseUp('AddBonus',true);ChangeSpanClass('S42',true)" onMouseOut="ChangeImageWhenMouseUp('AddBonus',false);ChangeSpanClass('S42',false)" onClick="SendACommand('AC=acAddOfferArticle')">			  
+				   <span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer">
+				   <img border="0" src="./gen_images/AddBonus.gif" width="30" height="23" name="AddBonus">			   
+				   </span>
+				   </div>
+				  </td>
+				  <td width="0">&nbsp;</td>
+				  <td valign="middle" align="left">
+				   <div align="left" onMouseOver="ChangeImageWhenMouseUp('AddBonus',true);ChangeSpanClass('S42',true)" onMouseOut="ChangeImageWhenMouseUp('AddBonus',false);ChangeSpanClass('S42',false)" onClick="SendACommand('AC=acAddOfferArticle')">
+                       
+				   <span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer">
+				   <span class="TextStyle" id="S42">Add a Demo Item</span>			   
+				   </span>
+				   </div>
+				  </td>
+				   
+				</tr>
+
+				<tr><td height="0"></td></tr>
+		  </table>
+		  </fieldset>		
+			
+			</td>
+		
+		<td width="20" align="left">&nbsp;</td>
+		
+		<td  width="238" align="left" valign="top">
+		
+		<table width="238" border="0" align="left" cellpadding="0" cellspacing="0" id="table1">
+	<!-- Here the First Entry !-->	  
+		  <tr>
+			<td width="238" height="64" align="left" valign="top" dir="ltr">
+				<fieldset style="text-align: left; direction: ltr; word-spacing:0; text-indent: 0; line-height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding: 0">
+						  <legend align="left"> <font class="Titles">Manufacturing Palette</font></legend>
+						  <table width="238" height="46" border="0" cellpadding="0" cellspacing="0" dir="ltr">
+							<tr>
+							  <td align="left" width="50">
+									 <div align="center" onMouseOver="ChangeImageWhenMouseUp('AddManifactoring',true);ChangeSpanClass('S30',true)" onMouseOut="ChangeImageWhenMouseUp('AddManifactoring',false);ChangeSpanClass('S30',false)" onClick="SendACommand('AC=acAddManufacturing')">
+									 <span style="margin-right: 0; margin-top: 0; margin-bottom: 0; margin-left:0; cursor:pointer">
+									   <img border="0" src="./gen_images/AddManifactoring.gif" width="30" height="23" name="AddManifactoring">
+									 </span>							     
+									 </div>
+							  </td>
+							  <td width="0">&nbsp;</td>
+							  <td>
+									 <div align="left" onMouseOver="ChangeImageWhenMouseUp('AddManifactoring',true);ChangeSpanClass('S30',true)" onMouseOut="ChangeImageWhenMouseUp('AddManifactoring',false);ChangeSpanClass('S30',false)" onClick="SendACommand('AC=acAddManufacturing')"><span style="margin-right: 20px; margin-top: 0; margin-bottom: 0;cursor:pointer"><span class="TextStyle" id="S30">Add a Manufacture Model</span></span></div>
+							  </td>				  
+							</tr>
+				</table>
+				</fieldset>
+			</td>
+		  </tr>
+		  
+	  
+	<!-- Here the Second Entry !-->
+	<tr>
+			<td height="2">&nbsp;</td>
+		  </tr>
+		  
+
+		  <tr>
+			<td width="238" height="64" align="left" valign="top" dir="ltr">
+				<fieldset style="text-align: left; direction: ltr; word-spacing: 0; text-indent: 0; line-height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding: 0">
+				  <legend align="left"><font class="Titles">Labels Palette</font></legend>
+						  <table width="238" height="46" border="0" cellpadding="0" cellspacing="0" dir="ltr">
+							<tr>
+							  <td align="center" width="50">
+									 <div align="center" onMouseOver="ChangeImageWhenMouseUp('AddBarcode',true);ChangeSpanClass('S31',true)" onMouseOut="ChangeImageWhenMouseUp('AddBarcode',false);ChangeSpanClass('S31',false)" onClick="SendACommand('AC=acAddLabel')">
+									 <span style="margin-right: 0; margin-top: 0; margin-bottom: 0; margin-left:0; cursor:pointer">
+									 <img border="0" src="./gen_images/AddBarcode.gif" width="30" height="23" name="AddBarcode">
+									 </span>							     
+									 </div>
+							  </td>
+							  <td width="0">&nbsp;</td>
+							  <td>
+								<div align="left" onMouseOver="ChangeImageWhenMouseUp('AddBarcode',true);ChangeSpanClass('S31',true)" onMouseOut="ChangeImageWhenMouseUp('AddBarcode',false);ChangeSpanClass('S31',false)" onClick="SendACommand('AC=acAddLabel')"><span style="margin-right: 0; margin-top: 0; margin-bottom: 0;cursor:pointer"><span class="TextStyle" id="S31">Add a Label</span></span></div>
+							  </td>				  
+							</tr>
+				</table>
+				</fieldset>
+			</td>
+		  </tr>
+	  
+	<!-- Here the Third Entry !-->
+	<tr>
+			<td height="2" align="left">&nbsp;</td>
+		  </tr>
+
+		  <tr>
+			<td width="238" height="64" align="left" valign="top" dir="ltr">
+				<fieldset style="text-align: left; direction: ltr; word-spacing: 0; text-indent: 0; line-height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding: 0">
+				  <legend align="left"><font class="Titles">Configuration Palette</font></legend>
+						  <table width="238" border="0" cellpadding="0" cellspacing="0" dir="ltr">
+							<tr><td height="10"></td></tr>
+							<tr>
+							  <td align="center" width="50">
+									 <div align="center" onMouseOver="ChangeImageWhenMouseUp('NewCategory2',true);ChangeSpanClass('S32',true)" onMouseOut="ChangeImageWhenMouseUp('NewCategory2',false);ChangeSpanClass('S32',false)" onClick="SendACommand('AC=acAddArticles')">						  
+									 <span style="margin-right: 0; margin-top: 0; margin-bottom: 0; margin-left:0; cursor:pointer">
+									 <img border="0" src="./gen_images/NewCategory2.gif" width="30" height="23" name="NewCategory2">
+									 </span>							     
+									 </div>
+							  </td>
+							  <td width="0">&nbsp;</td>
+							  <td>
+								<div align="left" onMouseOver="ChangeImageWhenMouseUp('NewCategory2',true);ChangeSpanClass('S32',true)" onMouseOut="ChangeImageWhenMouseUp('NewCategory2',false);ChangeSpanClass('S32',false)" onClick="SendACommand('AC=acAddArticles')">
+                                    <span style="margin-right: 20px; margin-top: 0; margin-bottom: 0;cursor:pointer">
+                                        <span class="TextStyle" id="S32">Add a Category of Items</span>
+                                    </span>
+                                </div>
+							  </td>				  
+							</tr>
+							
+							<tr><td height="5"></td></tr>
+													
+							<tr>
+							  <td align="center" width="50">
+									 <div align="center" onMouseOver="ChangeImageWhenMouseUp('AddWight',true);ChangeSpanClass('S33',true)" onMouseOut="ChangeImageWhenMouseUp('AddWight',false);ChangeSpanClass('S33',false)" onClick="SendACommand('AC=acAddWeightUnit')">						  
+									 <span style="margin-right: 0; margin-top: 0; margin-bottom: 0; margin-left:0; cursor:pointer">
+									 <img border="0" src="./gen_images/AddWight.gif" width="30" height="23" name="AddWight">								 
+									 </span>							     
+									 </div>
+							  </td>
+							  <td width="0">&nbsp;</td>
+							  <td>
+								<div align="left" onMouseOver="ChangeImageWhenMouseUp('AddWight',true);ChangeSpanClass('S33',true)" onMouseOut="ChangeImageWhenMouseUp('AddWight',false);ChangeSpanClass('S33',false)" onClick="SendACommand('AC=acAddWeightUnit')"><span style="margin-right: 20px; margin-top: 0; margin-bottom: 0;cursor:pointer"><span class="TextStyle" id="S33">Add a Weight Unit</span></span></div>						  
+							  </td>				  
+							</tr>
+
+							<tr><td height="5"></td></tr>
+							<tr>
+							  <td align="center" width="50">
+									 <div align="center" onMouseOver="ChangeImageWhenMouseUp('NewBillKind',true);ChangeSpanClass('S34',true)" onMouseOut="ChangeImageWhenMouseUp('NewBillKind',false);ChangeSpanClass('S34',false)" onClick="SendACommand('AC=acAddBillKind')">						  
+									 <span style="margin-right: 0; margin-top: 0; margin-bottom: 0; margin-left:0; cursor:pointer">
+									 <img border="0" src="./gen_images/NewBillKind.gif" width="30" height="23" name="NewBillKind">								 
+									 </span>							     
+									 </div>
+							  </td>
+							  <td width="0">&nbsp;</td>
+							  <td>
+								<div align="left" onMouseOver="ChangeImageWhenMouseUp('NewBillKind',true);ChangeSpanClass('S34',true)" onMouseOut="ChangeImageWhenMouseUp('NewBillKind',false);ChangeSpanClass('S34',false)" onClick="SendACommand('AC=acAddBillKind')"><span style="margin-right: 20px; margin-top: 0; margin-bottom: 0;cursor:pointer"> <span class="TextStyle" id='S34'>Add New Invoice Type</span></span></div>						  
+							  </td>				  
+							</tr>
+							<tr><td height="10"></td></tr>						
+				</table>
+				</fieldset>
+			</td>
+		  </tr>
+
+
+		</table>
+		
+		</td>
+			
+	  </tr>
+	</table>
+				  
+			  </div>
+			   
+			</div>
+		  </div>
+	  </div>
+	</div>
+	<div class="panel panel-white modal" id="Work_Flow" >
+	  <div class="panel-body">
+	   <div class="container ">
+			<ul class="nav nav-tabs"  >
+			  <li class="active"><a href="#profile2" data-toggle="tab"><i class="fa fa-pie-chart"></i><strong> Accounting Operation   </strong></a></li>
+			  <li><a href="#messages2" data-toggle="tab"><i class="fa fa-money"></i><strong> Store Operation   </strong></a></li>
+			   
+			</ul>
+			
+			<div class="tab-content">
+				 <div class="tab-pane active" id="profile2"> 
+			  <!--my region-->
+			<table class="MainTable" cellpadding="0" cellspacing="0">
+				<tr height="100%">
+				  <td width="10">&nbsp;
+				  </td>
+				  <td width="100" valign="top">
+					<table width="100%" cellpadding="0" cellspacing="0">
+			  <!-- Line Number 1-->
+					  <tr height="10">
+						<td>&nbsp;</td>
+					  </tr>
+			  
+			  <!-- Line Number 2-->
+					  <tr height="46">
+						<td height="100%" align="center" valign="top">
+						  <div align="center" style="cursor:pointer" 
+							onClick="SendACommand('AC=acWorkPlanANewAccount')" 
+							onMouseOver="ChangeImageWhenMouseUp('NewAccount',true);ChangeSpanClass('S1',true)" 
+							onMouseOut="ChangeImageWhenMouseUp('NewAccount',false);ChangeSpanClass('S1',false)"> 
+							<img src="./gen_images/NewAccount.gif" name="NewAccount" width="75" height="60" id="NewAccount" /> 
+						  </div> 
+						</td>
+					  </tr>
+			  
+			  <!-- Line Number 3-->
+					  <tr height="10">
+						<td height="100%" align="center" valign="top">
+						  <div align="center" class="TextStyle" id="S1" style="cursor:pointer" 
+							onClick="SendACommand('AC=acWorkPlanANewAccount')" 
+							onMouseOver="ChangeImageWhenMouseUp('NewAccount',true);ChangeSpanClass('S1',true)" 
+							onMouseOut="ChangeImageWhenMouseUp('NewAccount',false);ChangeSpanClass('S1',false)">Add new account
+						  </div>
+						</td>
+					  </tr>
+			  
+			  <!-- Line Number 4-->
+					  <tr>
+						<td height="59">&nbsp;</td>  
+					  </tr>
+			  
+			  <!-- Line Number 5-->
+					  <tr height="46">
+						<td height="100%" align="center" valign="top">
+						  <div align="center" style="cursor:pointer" 
+							onClick="SendACommand('AC=acWorkPlanANewCurrency')" 
+							onMouseOver="ChangeImageWhenMouseUp('NewCurrency',true);ChangeSpanClass('S3',true)" 
+							onMouseOut="ChangeImageWhenMouseUp('NewCurrency',false);ChangeSpanClass('S3',false)"> 
+							<img src="./gen_images/NewCurrency.gif" name="NewCurrency" width="46" height="48" id="NewCurrency" /> 
+						  </div>
+						</td>
+					  </tr>
+			  
+			  <!-- Line Number 6-->
+					  <tr height="10">
+						<td height="100%" align="center" valign="top">
+						  <div align="center" class="TextStyle" id="S3" style="cursor:pointer" 
+							onClick="SendACommand('AC=acWorkPlanANewCurrency')" 
+							onMouseOver="ChangeImageWhenMouseUp('NewCurrency',true);ChangeSpanClass('S3',true)" 
+							onMouseOut="ChangeImageWhenMouseUp('NewCurrency',false);ChangeSpanClass('S3',false)">Add new currency
+						  </div>
+						</td>
+					  </tr>
+			  <!-- Line Number 7-->
+					  <tr>
+						<td height="59">&nbsp;</td>  
+					  </tr>
+
+			  <!-- Line Number 8-->
+					  <tr height="46">
+						<td height="100%" align="center" valign="top">
+						  <div align="center" style="cursor:pointer" 
+							onClick="SendACommand('AC=acWorkPlanANewCostCenter')" 
+							onMouseOver="ChangeImageWhenMouseUp('NewCostCenter',true);ChangeSpanClass('S2',true)" 
+							onMouseOut="ChangeImageWhenMouseUp('NewCostCenter',false);ChangeSpanClass('S2',false)"> 
+							<img src="./gen_images/NewCostCenter.gif" name="NewCostCenter" width="75" height="60" id="NewCostCenter" /> 
+						  </div>
+						</td>
+					  </tr>
+			  
+			  <!-- Line Number 9-->
+					  <tr height="10">
+						<td height="100%" align="center" valign="top">
+						  <div align="center" class="TextStyle" id="S2" style="cursor:pointer" 
+							onClick="SendACommand('AC=acWorkPlanANewCostCenter')" 
+							onMouseOver="ChangeImageWhenMouseUp('NewCostCenter',true);ChangeSpanClass('S2',true)" 
+							onMouseOut="ChangeImageWhenMouseUp('NewCostCenter',false);ChangeSpanClass('S2',false)">Add new cost center
+						  </div>
+						</td>
+					  </tr>
+					</table>
+				  </td>
+			  
+				  <td width="25" class="Spacer_Bar">&nbsp;
+				  </td>
+				  <td width="390" valign="top">
+					<table width="100%" cellpadding="0" cellspacing="0">
+			  <!-- Line Number 1 -->
+					  <tr height="10">
+					  </tr>
+
+			  <!-- Line Number 2 -->
+					  <tr>
+						<td class="TextStyle" width="117" align="center">
+						  <div align="left" 
+							<div align="center">
+							</div>
+						  </div>
+						</td>
+						<td class="TextStyle"   align="center">
+						  <div align="center" id="S6" style="cursor:pointer"
+							onClick="SendACommand('AC=acWorkPlanTreatJournal')" 
+							onMouseOver="ChangeImageWhenMouseUp('JornalEntry',true);ChangeSpanClass('S6',true)" 
+							onMouseOut="ChangeImageWhenMouseUp('JornalEntry',false);ChangeSpanClass('S6',false)">Daily journal entry
+						  </div>
+						</td>  
+						<td class="TextStyle" width="117" align="center">
+						  <div align="center" 
+						  </div>
+						</td>
+					  </tr>
+
+			  <!-- Line Number 3 -->
+					  <tr>
+						<td>
+						  <div align="center"
+						  </div>
+						</td>
+						<td>
+						  <div align="center" style="cursor:pointer" 
+							onClick="SendACommand('AC=acWorkPlanTreatJournal')" 
+							onMouseOver="ChangeImageWhenMouseUp('JornalEntry',true);ChangeSpanClass('S6',true)" 
+							onMouseOut="ChangeImageWhenMouseUp('JornalEntry',false);ChangeSpanClass('S6',false)"> 
+							<img src="./gen_images/JornalEntry.gif" name="JornalEntry" width="75" height="120" id="JornalEntry" /> 
+						  </div>
+						</td>  
+						<td>
+						  <div align="center"
+						  </div>
+						</td>  
+					  </tr>
+			  
+			  <!-- Line Number 4 -->
+					  <tr>
+					  </tr>
+			  
+			  <!-- Line Number 5 -->
+					  <tr>
+						<td>
+						  <div align="right" style="cursor:pointer" 
+							onclick="SendACommand('AC=acWorkPlanARewards')" 
+							onmouseover="ChangeImageWhenMouseUp('InRec2',true);ChangeSpanClass('S8',true)" 
+							onmouseout="ChangeImageWhenMouseUp('InRec2',false);ChangeSpanClass('S8',false)"> 
+							<img src="./gen_images/InRec2.gif" name="InRec2" width="128" height="75" id="InRec2" /> 
+						  </div>
+						</td>
+						<td>
+						  <div align="center" style="cursor:pointer" 
+							onclick="SendACommand('AC=acWorkPlanAEntry')" 
+							onmouseover="ChangeImageWhenMouseUp('Entry',true);ChangeSpanClass('S9',true)" 
+							onmouseout="ChangeImageWhenMouseUp('Entry',false);ChangeSpanClass('S9',false)"> 
+							<img src="./gen_images/Entry.gif" name="Entry" width="75" height="75" id="Entry" /> 
+						  </div>
+						</td>  
+						<td>
+						  <div align="left" style="cursor:pointer" 
+							onclick="SendACommand('AC=acWorkPlanAPayment')" 
+							onmouseover="ChangeImageWhenMouseUp('OutRec2',true);ChangeSpanClass('S7',true)" 
+							onmouseout="ChangeImageWhenMouseUp('OutRec2',false);ChangeSpanClass('S7',false)"> 
+							<img src="./gen_images/OutRec2.gif" name="OutRec2" width="128" height="75" id="OutRec2"/>
+						  </div>
+						</td>    
+					  </tr>
+
+			  <!-- Line Number 6 -->
+					  <tr>
+						<td>
+						  <div align="center" class="TextStyle" id="S7" style="cursor:pointer" 
+							onclick="SendACommand('AC=acWorkPlanARewards')" 
+							onmouseover="ChangeImageWhenMouseUp('InRec2',true);ChangeSpanClass('S8',true)" 
+							onmouseout="ChangeImageWhenMouseUp('InRec2',false);ChangeSpanClass('S8',false)">Receive note
+						  </div>
+						</td>
+						<td>
+						  <div align="center" class="TextStyle" id="S9" style="cursor:pointer" 
+							onclick="SendACommand('AC=acWorkPlanAEntry')" 
+							onmouseover="ChangeImageWhenMouseUp('Entry',true);ChangeSpanClass('S9',true)" 
+							onmouseout="ChangeImageWhenMouseUp('Entry',false);ChangeSpanClass('S9',false)">Journal Entry
+						  </div>
+						</td>  
+						<td>
+						  <div align="center" class="TextStyle" id="S8" style="cursor:pointer" 
+							onclick="SendACommand('AC=acWorkPlanAPayment')" 
+							onmouseover="ChangeImageWhenMouseUp('OutRec2',true);ChangeSpanClass('S7',true)" 
+							onmouseout="ChangeImageWhenMouseUp('OutRec2',false);ChangeSpanClass('S7',false)">Payment note
+						  </div>
+						</td>
+					  </tr>
+			  
+			  <!-- Line Number 7 -->
+					  <tr height="4">
+						<td>&nbsp;</td>
+					  </tr>
+			  
+			  <!-- Line Number 8 -->
+					  <tr height="48">
+						<td valign="bottom">
+						  <div align="left" style="cursor:pointer" 
+							onclick="SendACommand('AC=acWorkPlanacPaymentRecon')" 
+							onmouseover="ChangeImageWhenMouseUp('Payments',true);ChangeSpanClass('S10',true)" 
+							onmouseout="ChangeImageWhenMouseUp('Payments',false);ChangeSpanClass('S10',false)"> 
+							<img src="./gen_images/Payments.gif" name="Payments" width="128" height="120" id="Payments"/>
+						  </div>
+						</td>
+						<td>
+						  <div align="center" style="cursor:pointer" 
+							onclick="SendACommand('AC=acWorkPlanSSaleVoucher')" 
+							onmouseover="ChangeImageWhenMouseUp('ServiceBill',true);ChangeSpanClass('S11',true)" 
+							onmouseout="ChangeImageWhenMouseUp('ServiceBill',false);ChangeSpanClass('S11',false)"> 
+							<div align="center"><img src="./gen_images/ServiceBill.gif" name="ServiceBill" width="75" height="120" id="ServiceBill" /> 
+							</div>
+						  </div>
+						</td>
+					  </tr>
+			  
+			  <!-- Line Number 9 -->
+					  <tr>
+						<td class="TextStyle">
+						  <div align="right" id="S10" style="cursor:pointer" 
+							onclick="SendACommand('AC=acWorkPlanacPaymentRecon')" 
+							onmouseover="ChangeImageWhenMouseUp('Payments',true);ChangeSpanClass('S10',true)" 
+							onmouseout="ChangeImageWhenMouseUp('Payments',false);ChangeSpanClass('S10',false)">Account payments
+						  </div>
+						</td>
+						<td class="TextStyle">
+						  <div align="center" id="S11" style="cursor:pointer" 
+							onclick="SendACommand('AC=acWorkPlanSSaleVoucher')" 
+							onmouseover="ChangeImageWhenMouseUp('ServiceBill',true);ChangeSpanClass('S11',true)" 
+							onmouseout="ChangeImageWhenMouseUp('ServiceBill',false);ChangeSpanClass('S11',false)">Service Invoice
+						  </div>
+						</td>
+					  </tr>
+			  
+			  <!-- Line Number 10 -->
+					</table>
+				  </td>
+			  
+				  <td width="25" class="Spacer_Bar">&nbsp;
+				  </td>
+			  
+				  <td width="150" valign="top">
+					<table width="100%" cellpadding="0" cellspacing="0">
+			  <!-- Line Number 1-->
+					  <tr height="10">
+						 <td>&nbsp;</td>
+					  </tr>
+			  
+			  <!-- Line Number 2-->
+					  <tr height="46">
+						<td height="100%" align="center" valign="top" width="100">
+						  <div align="center" style="cursor:pointer" 
+							onclick="SendACommand('AC=acWorkPlanAPickAccounts')" 
+							onmouseover="ChangeImageWhenMouseUp('BroAccounts',true);ChangeSpanClass('S12',true)" 
+							onmouseout="ChangeImageWhenMouseUp('BroAccounts',false);ChangeSpanClass('S12',false)"> 
+							<img src="./gen_images/BroAccounts.gif" name="BroAccounts" width="48" height="48" id="BroAccounts" /> 
+						  </div>
+						</td>
+						<td></td>
+					  </tr>
+			  
+			  <!-- Line Number 3-->
+					  <tr height="10">
+						<td height="100%" align="center" valign="top" width="100">
+						  <div align="center" class="TextStyle" id="S12" style="cursor:pointer" 
+							onclick="SendACommand('AC=acWorkPlanAPickAccounts')" 
+							onmouseover="ChangeImageWhenMouseUp('BroAccounts',true);ChangeSpanClass('S12',true)" 
+							onmouseout="ChangeImageWhenMouseUp('BroAccounts',false);ChangeSpanClass('S12',false)">Browse accounts
+						  </div>
+						</td>
+						<td></td>
+					  </tr>
+			  
+			  <!-- Line Number 4-->
+					  <tr height="100">
+					  </tr>
+			  
+			  <!-- Line Number 5-->
+					  <tr height="100%">
+						<td>
+						  <table height="100%" width="100%" cellspacing="0" cellpadding="0">
+							<tr>
+							  <td width="30">
+								<div align="center" style="cursor:pointer" 
+								  onclick="SendACommand('AC=acWorkPlanABrowseBudgetExpend')" 
+								  onmouseover="ChangeImageWhenMouseUp('RepCreditDebit',true);ChangeSpanClass('S13',true)" 
+								  onmouseout="ChangeImageWhenMouseUp('RepCreditDebit',false);ChangeSpanClass('S13',false)"> 
+								  <img src="./gen_images/RepCreditDebit.gif" name="RepCreditDebit" width="35" height="25" id="RepCreditDebit" /> 
+								</div>
+							  </td>
+							  <td class="TextStyle">
+								<div align="left" id="S13" style="cursor:pointer" 
+								  onclick="SendACommand('AC=acWorkPlanABrowseBudgetExpend')" 
+								  onmouseover="ChangeImageWhenMouseUp('RepCreditDebit',true);ChangeSpanClass('S13',true)" 
+								  onmouseout="ChangeImageWhenMouseUp('RepCreditDebit',false);ChangeSpanClass('S13',false)">Actual Expenses
+								</div>
+							  </td>
+							</tr>
+							<tr height="5">
+							</tr>
+							<tr>
+							  <td width="30">
+								<div align="center" class="TextStyle" style="cursor:pointer" 
+								  onclick="SendACommand('AC=acWorkPlanABrowseTrialBal')" 
+								  onmouseover="ChangeImageWhenMouseUp('RepTrialBalance',true);ChangeSpanClass('S14',true)" 
+								  onmouseout="ChangeImageWhenMouseUp('RepTrialBalance',false);ChangeSpanClass('S14',false)"> 
+								  <img src="./gen_images/RepTrialBalance.gif" name="RepTrialBalance" width="24" height="22" id="RepTrialBalance" /> 
+								</div>
+							  </td>
+							  <td class="TextStyle">
+								<div align="left" id="S14" class="TextStyle" style="cursor:pointer" 
+								  onclick="SendACommand('AC=acWorkPlanABrowseTrialBal')" 
+								  onmouseover="ChangeImageWhenMouseUp('RepTrialBalance',true);ChangeSpanClass('S14',true)" 
+								  onmouseout="ChangeImageWhenMouseUp('RepTrialBalance',false);ChangeSpanClass('S14',false)">Trial balance
+								</div>
+							  </td>
+							</tr>
+							<tr height="5">
+							</tr>
+							<tr>
+							  <td width="30">
+								<div align="center" class="TextStyle" style="cursor:pointer" 
+								  onclick="SendACommand('AC=acWorkPlanABrowseLedger')" 
+								  onmouseover="ChangeImageWhenMouseUp('RepLedjer',true);ChangeSpanClass('S15',true)" 
+								  onmouseout="ChangeImageWhenMouseUp('RepLedjer',false);ChangeSpanClass('S15',false)"> 
+								  <img src="./gen_images/RepLedjer.gif" name="RepLedjer" width="25" height="23" id="RepLedjer" /> 
+								</div>
+							  </td>
+							  <td class="TextStyle">
+								<div align="left" id="S15" class="TextStyle" style="cursor:pointer" 
+								  onclick="SendACommand('AC=acWorkPlanABrowseLedger')" 
+								  onmouseover="ChangeImageWhenMouseUp('RepLedjer',true);ChangeSpanClass('S15',true)" 
+								  onmouseout="ChangeImageWhenMouseUp('RepLedjer',false);ChangeSpanClass('S15',false)">Ledger
+								</div>
+							  </td>
+							</tr>
+			   
+						  </table>
+						</td>
+					  </tr>
+					</table>
+				  </td>
+				</tr>
+		  </table>  
+				</div>
+			   <!--my region-->
+			  <div class="tab-pane" id="messages2"> 
+				  <!--testtt-->
+                <div class="col-md-2 pull-lefts"> 
+                    <ul class="nav nav-pills nav-stacked "style="padding-top: 10px;">
+                        <li class="nav-header"></li>
+                        <li class="active" onclick="tog(this)" id="t1"> <a href="#" ><i class="glyphicon glyphicon-shopping-cart"></i> Sales Operation  </a> </li> 
+                        <li onclick="tog(this)" id="t2"><a href="#"><i class="glyphicon glyphicon-book"></i> Purchase Operation</a></li>
+                        <li onclick="tog(this)" id="t3"> <a href="#" ><i class="glyphicon glyphicon-star"></i> Manufacturing Operation  </a> 	</li>  
+                    </ul>		
+		       </div>
+								
+				  <!--testtt-->
+						<div class="" id="t11">
+				<table align="left" cellpadding="0" cellspacing="0" class="MainTable" dir="ltr">
+		  <tr height="100%">
+			<td width="10">&nbsp;</td>
+			  <td width="100" valign="top">
+				<table width="100%" cellpadding="0" cellspacing="0">
+				<!-- Line Number 1-->
+				  <tr height="10">
+					<td>&nbsp;</td>
+				  </tr>
+	  
+			<!-- Line Number 2-->
+			  <tr height="46">
+				<td height="100%" align="center" valign="top">
+				  <div align="center" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSPurchaseNewArticle')" 
+					onmouseover="ChangeImageWhenMouseUp('NewArticle',true);ChangeSpanClass('S1',true)" 
+					onmouseout="ChangeImageWhenMouseUp('NewArticle',false);ChangeSpanClass('S1',false)"> 
+					<img src="./gen_images/NewArticle.gif" name="NewArticle" width="48" height="43" id="NewArticle" /> 
+				  </div>
+				</td>
+			  </tr>
+	  
+			<!-- Line Number 3-->
+			  <tr height="10">
+				<td height="100%" align="center" valign="top">
+				  <div align="center" class="TextStyle" id="S1" style="cursor:pointer" 
+					onClick="SendACommand('AC=acWorkPlanSPurchaseNewArticle')" 
+					onMouseOver="ChangeImageWhenMouseUp('NewArticle',true);ChangeSpanClass('S1',true)" 
+					onMouseOut="ChangeImageWhenMouseUp('NewArticle',false);ChangeSpanClass('S1',false)">Add new Item
+				  </div>
+				</td>
+			  </tr>
+	  
+			<!-- Line Number 4-->
+			  <tr>
+				<td height="59">&nbsp;</td>  
+			  </tr>
+	  
+			<!-- Line Number 5-->
+			  <tr height="46">
+				<td height="100%" align="center" valign="top">
+				  <div align="center" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSManufactureNewWarehouse')" 
+					onmouseover="ChangeImageWhenMouseUp('NewWarehouse',true);ChangeSpanClass('S2',true)" 
+					onmouseout="ChangeImageWhenMouseUp('NewWarehouse',false);ChangeSpanClass('S2',false)"> 
+					<img src="./gen_images/NewWarehouse.gif" name="NewWarehouse" width="48" height="43" id="NewWarehouse" /> 
+				  </div>
+				</td>
+			  </tr>
+	  
+			<!-- Line Number 6-->
+			  <tr height="10">
+				<td height="100%" align="center" valign="top">
+				  <div align="center" class="TextStyle" id="S2" style="cursor:pointer" 
+					onClick="SendACommand('AC=acWorkPlanSPurchaseNewWarehouse')" 
+					onMouseOver="ChangeImageWhenMouseUp('NewWarehouse',true);ChangeSpanClass('S2',true)" 
+					onMouseOut="ChangeImageWhenMouseUp('NewWarehouse',false);ChangeSpanClass('S2',false)">Add new store
+				  </div>
+				</td>
+			  </tr>
+		
+			<!-- Line Number 7-->
+			  <tr>
+				<td height="59">&nbsp;</td>  
+			  </tr>
+
+			<!-- Line Number 8-->
+			  <tr height="46">
+				<td height="100%" align="center" valign="top">
+				  <div align="center" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSSaleNewCustomer')" 
+					onmouseover="ChangeImageWhenMouseUp('NewCustomer',true);ChangeSpanClass('S3',true)" 
+					onmouseout="ChangeImageWhenMouseUp('NewCustomer',false);ChangeSpanClass('S3',false)"> 
+					<img src="./gen_images/NewCustomer.gif" name="NewCustomer" width="75" height="60" id="NewCustomer" /> 
+				  </div>
+				</td>
+			  </tr>
+	  
+			<!-- Line Number 9-->
+			  <tr height="10">
+				<td height="100%" align="center" valign="top">
+				  <div align="center" class="TextStyle" id="S3" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSSaleNewCustomer')" 
+					onmouseover="ChangeImageWhenMouseUp('NewCustomer',true);ChangeSpanClass('S3',true)" 
+					onmouseout="ChangeImageWhenMouseUp('NewCustomer',false);ChangeSpanClass('S3',false)">Add new customer
+				  </div>
+				</td>
+			  </tr>
+			</table>  
+		  </td>
+	  
+		  <td width="25" class="Spacer_Bar">&nbsp;</td>
+		  <td width="390" valign="top">
+			<table width="100%" cellpadding="0" cellspacing="0">
+			<!-- Line Number 1 -->
+			  <tr height="10">
+				<td>&nbsp;</td>
+			  </tr>
+			<!-- Line Number 2 -->
+			  <tr>
+				<td class="TextStyle" colspan="3">
+				  <div align="center" id="S6" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSSalesOrder')" 
+					onmouseover="ChangeImageWhenMouseUp('Order',true);ChangeSpanClass('S6',true)" 
+					onmouseout="ChangeImageWhenMouseUp('Order',false);ChangeSpanClass('S6',false)">Sales Order
+	</div>
+				</td>
+			  </tr>
+			<!-- Line Number 3 -->
+			  <tr> </tr>
+			<!-- Line Number 4 -->
+			  <tr>
+				<td colspan="3"></td>
+			  </tr>
+			<!-- Line Number 5 -->
+			  <tr> </tr>
+			<!-- Line Number 6 -->
+			  <tr> </tr>
+			  <tr>
+				<td colspan="3">
+				  <div align="center" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSSalesOrder')" 
+					onmouseover="ChangeImageWhenMouseUp('Order',true);ChangeSpanClass('S6',true)" 
+					onmouseout="ChangeImageWhenMouseUp('Order',false);ChangeSpanClass('S6',false)"> 
+					<img src="./gen_images/Order.gif" name="Order" width="44" height="98" id="Order" /> 
+				  </div>	  
+				</td>
+			  </tr>
+			  <tr height="5">
+				<td></td>
+			  </tr>
+			<!-- Line Number 5 -->
+			  <tr>
+				<td>
+				  <div align="left" style="cursor:pointer" 
+					 onclick="SendACommand('AC=acWorkPlanSPurchaseEntry')" 
+					 onmouseover="ChangeImageWhenMouseUp('Entry2',true);ChangeSpanClass('S8',true)" 
+					 onmouseout="ChangeImageWhenMouseUp('Entry2',false);ChangeSpanClass('S8',false)">
+					 <div align="center"> 
+					   <img src="./gen_images/Entry2.gif" name="Entry2" width="75" height="75" id="Entry2" /> 
+					 </div>
+				  </div>
+				</td>
+				<td>
+				  <div align="left" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSSaleSaleBill')" 
+					onmouseover="ChangeImageWhenMouseUp('Bill',true);ChangeSpanClass('S9',true)" 
+					onmouseout="ChangeImageWhenMouseUp('Bill',false);ChangeSpanClass('S9',false)"> 
+					<img src="./gen_images/Bill.gif" name="Bill" width="137" height="75" id="Bill" /> 
+				  </div>
+				</td>
+				<td>
+				   <div align="center" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSSalePOSBill')" 
+					onmouseover="ChangeImageWhenMouseUp('PointOfSale',true);ChangeSpanClass('S7',true)" 
+					onmouseout="ChangeImageWhenMouseUp('PointOfSale',false);ChangeSpanClass('S7',false)"> 
+					<img src="./gen_images/PointOfSale.gif" name="PointOfSale" width="116" height="42" id="PointOfSale" /> 
+				  </div>	  
+				</td>
+			  </tr>
+			<!-- Line Number 6 -->
+			  <tr>
+				<td class="TextStyle">
+				  <div align="left" id="S7" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanEntry')" 
+					onmouseover="ChangeImageWhenMouseUp('Entry',true);ChangeSpanClass('S8',true)" 
+					onmouseout="ChangeImageWhenMouseUp('Entry',false);ChangeSpanClass('S8',false)">
+					<div align="center">&nbsp;Journal Entry
+					</div>
+				  </div>
+				</td>
+				  <td class="TextStyle"><div align="left" id="S9" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSSaleSaleBill')" 
+					onmouseover="ChangeImageWhenMouseUp('Bill',true);ChangeSpanClass('S9',true)" 
+					onmouseout="ChangeImageWhenMouseUp('Bill',false);ChangeSpanClass('S9',false)">
+					<div align="center">&nbsp;&nbsp;Sales Invoice
+					</div>
+				  </div>
+				</td>
+				<td class="TextStyle">
+				  <div align="left" id="S7" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSSalePOSBill')" 
+					onmouseover="ChangeImageWhenMouseUp('PointOfSale',true);ChangeSpanClass('S7',true)" 
+					onmouseout="ChangeImageWhenMouseUp('PointOfSale',false);ChangeSpanClass('S7',false)">
+					<div align="center">&nbsp;POS Invoice
+					</div>
+				  </div>
+				</td>
+			  </tr>
+			<!-- Line Number 8 -->
+			  <tr>
+				<td valign="bottom">
+				  <div align="left" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSManufactureStoreMovement')" 
+					onmouseover="ChangeImageWhenMouseUp('StockMovement',true);ChangeSpanClass('S10',true)" 
+					onmouseout="ChangeImageWhenMouseUp('StockMovement',false);ChangeSpanClass('S10',false)">
+					<img src="./gen_images/StockMovement.gif" name="StockMovement" width="60" height="60" id="StockMovement" />
+				  </div>
+				</td>
+				<td valign="top">
+				  <div align="center" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSSaleVoucher')" 
+					onmouseover="ChangeImageWhenMouseUp('ServiceBill2',true);ChangeSpanClass('S11',true)" 
+					onmouseout="ChangeImageWhenMouseUp('ServiceBill2',false);ChangeSpanClass('S11',false)">
+					<img src="./gen_images/ServiceBill2.gif" name="SarveBills" width="75" height="120" hspace="5" id="ServiceBill2" /> 
+				  </div>
+				</td>
+			  </tr>
+			<!-- Line Number 9 -->
+			  <tr>
+				<td class="TextStyle">
+				  <div align="left" id="S10" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSManufactureStoreMovement')" 
+					onmouseover="ChangeImageWhenMouseUp('StockMovement',true);ChangeSpanClass('S10',true)" 
+					onmouseout="ChangeImageWhenMouseUp('StockMovement',false);ChangeSpanClass('S10',false)">Items transfer
+				  </div>
+				</td>
+				<td class="TextStyle">
+				  <div align="center" id="S11" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSSaleVoucher')" 
+					onmouseover="ChangeImageWhenMouseUp('ServiceBill',true);ChangeSpanClass('S11',true)" 
+					onmouseout="ChangeImageWhenMouseUp('ServiceBill',false);ChangeSpanClass('S11',false)">Service Invoice
+				  </div>
+				</td>
+			  </tr>
+			<!-- Line Number 10 -->
+			  <tr>
+				<td>&nbsp;</td>
+			  </tr>
+			</table>
+		  </td>
+	  
+		  <td width="25" class="Spacer_Bar">&nbsp;</td>
+	  
+		  <td width="150" valign="top">
+			<table width="100%" cellpadding="0" cellspacing="0">
+			<!-- Line Number 1-->
+			  <tr height="10">
+				<td>&nbsp;</td>
+			  </tr>
+	  
+			<!-- Line Number 2-->
+			  <tr height="46">
+				<td height="100%" align="center" valign="top" width="100">
+				  <div align="center" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSManufacturePickArticles')" 
+					onmouseover="ChangeImageWhenMouseUp('BrowseArticle',true);ChangeSpanClass('S12',true)" 
+					onmouseout="ChangeImageWhenMouseUp('BrowseArticle',false);ChangeSpanClass('S12',false)">
+					<img src="./gen_images/BrowseArticle.gif" name="BrowseArticle" width="48" height="48" id="BrowseArticle" />
+				  </div>
+				</td>
+				<td></td>
+			  </tr>
+	  
+			<!-- Line Number 3-->
+			  <tr height="10">
+				<td height="100%" align="center" valign="top" width="100">
+				  <div align="center" class="TextStyle" id="S12" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSManufacturePickArticles')" 
+					onmouseover="ChangeImageWhenMouseUp('BrowseArticle',true);ChangeSpanClass('S12',true)" 
+					onmouseout="ChangeImageWhenMouseUp('BrowseArticle',false);ChangeSpanClass('S12',false)">Browse Items
+				  </div>
+				</td>
+				<td></td>
+			  </tr>
+	  
+			<!-- Line Number 4-->
+			  <tr>
+				<td height="0">&nbsp;</td>  
+			  </tr>
+
+			<!-- Line Number 5-->
+
+			<!-- Line Number 6-->
+			  <tr height="10">
+				<td></td>
+				<td></td>
+			  </tr>
+	  
+			<!-- Line Number 7-->
+			  <tr height="10">  </tr>
+	   
+			<!-- Line Number 8-->
+			  <tr height="100%">
+				<td colspan="2">
+				  <table height="100%" width="100%" cellspacing="0" cellpadding="0">
+					<tr>
+					  <td width="30">
+						<div align="center" style="cursor:pointer" 
+						  onclick="SendACommand('AC=acWorkPlanSSaleCustomersWithdrawal')" 
+						  onmouseover="ChangeImageWhenMouseUp('RepCustomerSales',true);ChangeSpanClass('S30',true)" 
+						  onmouseout="ChangeImageWhenMouseUp('RepCustomerSales',false);ChangeSpanClass('S30',false)">
+						  <img src="./gen_images/RepCustomerSales.gif" width="30" height="22" id="RepCustomerSales"/>
+						</div>
+					  </td>
+					  <td class="TextStyle">
+						<div align="left" style="cursor:pointer" id="S30" 
+						  onclick="SendACommand('AC=acWorkPlanSSaleCustomersWithdrawal')" 
+						  onmouseover="ChangeImageWhenMouseUp('RepCustomerSales',true);ChangeSpanClass('S30',true)" 
+						  onmouseout="ChangeImageWhenMouseUp('RepCustomerSales',false);ChangeSpanClass('S30',false)">Customer withdrawal
+						</div>
+					  </td>
+					</tr>   
+					<tr height="5">   </tr>
+	   
+					<tr>
+					  <td width="30"><div align="center" style="cursor:pointer" 
+						onclick="SendACommand('AC=acWorkPlanSSaleNonMovedArticles')" 
+						onmouseover="ChangeImageWhenMouseUp('RepUnmovementArticles',true);ChangeSpanClass('S31',true)" 
+						onmouseout="ChangeImageWhenMouseUp('RepUnmovementArticles',false);ChangeSpanClass('S31',false)"> 
+						<img src="./gen_images/RepUnmovementArticles.gif" width="28" height="22" id="RepUnmovementArticles"/> 
+					  </div>
+					</td>
+					<td class="TextStyle">
+					  <div align="left" id="S31" class="TextStyle" style="cursor:pointer" 
+						onclick="SendACommand('AC=acWorkPlanSSaleNonMovedArticles')" 
+						onmouseover="ChangeImageWhenMouseUp('RepUnmovementArticles',true);ChangeSpanClass('S31',true)" 
+						onmouseout="ChangeImageWhenMouseUp('RepUnmovementArticles',false);ChangeSpanClass('S31',false)">Inactive Items
+					  </div>
+					</td>
+				  </tr>   
+				  <tr height="5">   </tr>   
+				  <tr>
+					<td width="30">
+					  <div align="center" style="cursor:pointer" 
+						onclick="SendACommand('AC=acWorkPlanSSaleSaleBills')" 
+						onmouseover="ChangeImageWhenMouseUp('RepBill',true);ChangeSpanClass('S13',true)" 
+						onmouseout="ChangeImageWhenMouseUp('RepBill',false);ChangeSpanClass('S13',false)"> 
+						<img src="./gen_images/RepBill.gif" name="RepBill" width="35" height="25" id="RepBill" /> 
+					  </div>
+					</td>
+					<td class="TextStyle">
+					  <div align="left" id="S13" style="cursor:pointer" 
+						onclick="SendACommand('AC=acWorkPlanSSaleSaleBills')" 
+						onmouseover="ChangeImageWhenMouseUp('RepBill',true);ChangeSpanClass('S13',true)" 
+						onmouseout="ChangeImageWhenMouseUp('RepBill',false);ChangeSpanClass('S13',false)">Sale Invoices
+					  </div>
+					</td>
+				  </tr>
+	   
+				  <tr height="5">   </tr>
+
+				  <tr>
+					<td width="30">
+					  <div align="center" style="cursor:pointer" 
+						onclick="SendACommand('AC=acWorkPlanBrowseArtSales')" 
+						onmouseover="ChangeImageWhenMouseUp('RepSales',true);ChangeSpanClass('S13',true)" 
+						onmouseout="ChangeImageWhenMouseUp('RepSales',false);ChangeSpanClass('S13',false)"> 
+						<img src="./gen_images/RepSales.gif" name="RepSales" width="35" height="25" id="RepSales" /> 
+					  </div>
+					</td>
+					<td class="TextStyle">
+					  <div align="left" id="S13" style="cursor:pointer" 
+						onclick="SendACommand('AC=acWorkPlanBrowseArtSales')" 
+						onmouseover="ChangeImageWhenMouseUp('RepSales',true);ChangeSpanClass('S13',true)" 
+						onmouseout="ChangeImageWhenMouseUp('RepSales',false);ChangeSpanClass('S13',false)">Item sales
+					  </div>
+					</td>
+				  </tr>
+	   
+				  <tr height="5">   </tr>
+		  
+				  <tr>
+					<td width="30">
+					  <div align="center" class="TextStyle" style="cursor:pointer" 
+						onclick="SendACommand('AC=acWorkPlanSPurchaseBrowseInventory')" 
+						onmouseover="ChangeImageWhenMouseUp('RepInventory',true);ChangeSpanClass('S14',true)" 
+						onmouseout="ChangeImageWhenMouseUp('RepInventory',false);ChangeSpanClass('S14',false)"> 
+						<img src="./gen_images/RepInventory.gif" name="RepInventory" width="27" height="23" id="RepInventory" /> 
+					  </div>
+					</td>
+					<td class="TextStyle">
+					  <div align="left" id="S14" class="TextStyle" style="cursor:pointer" 
+						onclick="SendACommand('AC=acWorkPlanSPurchaseBrowseInventory')" 
+						onmouseover="ChangeImageWhenMouseUp('RepInventory',true);ChangeSpanClass('S14',true)" 
+						onmouseout="ChangeImageWhenMouseUp('RepInventory',false);ChangeSpanClass('S14',false)">Inventory
+					  </div>
+					</td>
+				  </tr>
+
+				  <tr height="5">   </tr>
+		  
+				  <tr>
+					<td width="30">
+					  <div align="center" class="TextStyle" style="cursor:pointer" 
+						onclick="SendACommand('AC=acWorkPlanSPurchaseArticlesCard')" 
+						onmouseover="ChangeImageWhenMouseUp('RepArticlesCard',true);ChangeSpanClass('S15',true)" 
+						onmouseout="ChangeImageWhenMouseUp('RepArticlesCard',false);ChangeSpanClass('S15',false)"> 
+						<img src="./gen_images/RepArticlesCard.gif" name="RepArticlesCard" width="27" height="21" id ="RepArticlesCard" /> 
+					  </div>
+					</td>
+					<td class="TextStyle">
+					  <div align="left" id="S15" class="TextStyle" style="cursor:pointer" 
+						onclick="SendACommand('AC=acWorkPlanSPurchaseArticlesCard')" 
+						onmouseover="ChangeImageWhenMouseUp('RepArticlesCard',true);ChangeSpanClass('S15',true)" 
+						onmouseout="ChangeImageWhenMouseUp('RepArticlesCard',false);ChangeSpanClass('S15',false)">Items
+					  </div>
+					</td>
+				  </tr>
+				</table>   
+			  </td>
+			</tr>
+		  </table>  
+		</td>
+	  </tr>
+	</table>
+						</div>
+						<div class="modal" id="t21">
+						<table align="left" cellpadding="0" cellspacing="0" class="MainTable" dir="ltr">
+		<tr height="100%">
+		  <td width="10">&nbsp;</td>
+		  <td width="100" valign="top">
+			<table width="100%" cellpadding="0" cellspacing="0">
+			<!-- Line Number 1-->
+			  <tr height="10">
+				<td>&nbsp;</td>
+			  </tr>
+	  
+			<!-- Line Number 2-->
+			  <tr height="46">
+				<td height="100%" align="center" valign="top">
+				  <div align="center" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSPurchaseNewArticle')" 
+					onmouseover="ChangeImageWhenMouseUp('NewArticle2',true);ChangeSpanClass('S1',true)" 
+					onmouseout="ChangeImageWhenMouseUp('NewArticle2',false);ChangeSpanClass('S1',false)"> 
+					<img src="./gen_images/NewArticle2.gif" name="NewArticle2" width="48" height="43" id="NewArticle2" /> 
+				  </div>
+				</td>
+			  </tr>
+	  
+			<!-- Line Number 3-->
+			  <tr height="10">
+				<td height="100%" align="center" valign="top">
+				  <div align="center" class="TextStyle" id="S1" style="cursor:pointer" 
+					onClick="SendACommand('AC=acWorkPlanSPurchaseNewArticle')" 
+					onMouseOver="ChangeImageWhenMouseUp('NewArticle',true);ChangeSpanClass('S1',true)" 
+					onMouseOut="ChangeImageWhenMouseUp('NewArticle',false);ChangeSpanClass('S1',false)">Add new Item
+				  </div>
+				</td>
+			  </tr>
+	  
+			<!-- Line Number 4-->
+			  <tr>
+				<td height="59">&nbsp;</td>  
+			  </tr>
+	  
+			<!-- Line Number 5-->
+			  <tr height="46">
+				<td height="100%" align="center" valign="top">
+				  <div align="center" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSManufactureNewWarehouse')" 
+					onmouseover="ChangeImageWhenMouseUp('NewWarehouse2',true);ChangeSpanClass('S2',true)" 
+					onmouseout="ChangeImageWhenMouseUp('NewWarehouse2',false);ChangeSpanClass('S2',false)"> 
+					<img src="./gen_images/NewWarehouse2.gif" name="NewWarehouse2" width="48" height="43" id="NewWarehouse2" /> 
+				  </div>
+				</td>
+			  </tr>
+	  
+			<!-- Line Number 6-->
+			  <tr height="10">
+				<td height="100%" align="center" valign="top">
+				  <div align="center" class="TextStyle" id="S2" style="cursor:pointer" 
+					onClick="SendACommand('AC=acWorkPlanSPurchaseNewWarehouse')" 
+					onMouseOver="ChangeImageWhenMouseUp('NewWarehouse',true);ChangeSpanClass('S2',true)" 
+					onMouseOut="ChangeImageWhenMouseUp('NewWarehouse',false);ChangeSpanClass('S2',false)">Add new store
+				  </div>
+				</td>
+			  </tr>
+		
+			<!-- Line Number 7-->
+			  <tr>
+				<td height="59">&nbsp;</td>  
+			  </tr>
+	 
+			<!-- Line Number 8-->
+			  <tr height="46">
+				<td height="100%" align="center" valign="top">
+				  <div align="center" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSPurchaseNewVendor')" 
+					onmouseover="ChangeImageWhenMouseUp('NewVendor',true);ChangeSpanClass('S3',true)" 
+					onmouseout="ChangeImageWhenMouseUp('NewVendor',false);ChangeSpanClass('S3',false)"> 
+					<img src="./gen_images/NewVendor.gif" name="NewVendor" width="75" height="60" id="NewVendor" /> 
+				  </div>
+				</td>
+			  </tr>
+	  
+			<!-- Line Number 9-->
+			  <tr height="10">
+				<td height="100%" align="center" valign="top">
+				  <div align="center" class="TextStyle" id="S3" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSPurchaseNewVendor')" 
+					onmouseover="ChangeImageWhenMouseUp('NewVendor',true);ChangeSpanClass('S3',true)" 
+					onmouseout="ChangeImageWhenMouseUp('NewVendor',false);ChangeSpanClass('S3',false)">Add new vendor
+				  </div>
+				</td>
+			  </tr>
+			</table>
+		  </td>
+	  
+		  <td width="25" class="Spacer_Bar">&nbsp;</td>
+		  <td width="390" valign="top">
+			<table width="100%" cellpadding="0" cellspacing="0">
+			<!-- Line Number 1 -->
+			  <tr height="10">
+				<td>&nbsp;</td>
+			  </tr>
+			<!-- Line Number 2 -->
+			  <tr height="100">
+				<td></td>
+			  </tr>
+			<!-- Line Number 3 -->
+			  <tr> </tr>
+			<!-- Line Number 4 -->
+			  <tr>
+				<td colspan="3"></td>
+			  </tr>
+			<!-- Line Number 5 -->
+			  <tr> </tr>
+			<!-- Line Number 6 -->
+			  <tr> </tr>
+			  <tr height="10">
+				<td>&nbsp;</td>
+			  </tr>
+			<!-- Line Number 5 -->
+			  <tr>
+				<td>
+				   <div align="left" style="cursor:pointer" 
+					 onclick="SendACommand('AC=acWorkPlanSPurchaseEntry')" 
+					 onmouseover="ChangeImageWhenMouseUp('Entry3',true);ChangeSpanClass('S8',true)" 
+					 onmouseout="ChangeImageWhenMouseUp('Entry3',false);ChangeSpanClass('S8',false)">
+					 <div align="center">
+					   <img src="./gen_images/Entry3.gif" name="Entry3" width="75" height="75" id="Entry3" /> 
+					 </div>
+				   </div>
+				</td>
+				<td>
+				   <div align="left" style="cursor:pointer" 
+					 onclick="SendACommand('AC=acWorkPlanSPurchasePurchaseBill')" 
+					 onmouseover="ChangeImageWhenMouseUp('Bill2',true);ChangeSpanClass('S9',true)" 
+					 onmouseout="ChangeImageWhenMouseUp('Bill2',false);ChangeSpanClass('S9',false)"> 
+					 <img src="./gen_images/Bill2.gif" name="Bill2" width="137" height="75" id="Bill2" /> 
+				   </div>
+				 </td>
+				 <td>
+				   <div align="center" style="cursor:pointer" 
+					 onclick="SendACommand('AC=acWorkPlanSPurchaseOrder')" 
+					 onmouseover="ChangeImageWhenMouseUp('Order3',true);ChangeSpanClass('S7',true)" 
+					 onmouseout="ChangeImageWhenMouseUp('Order3',false);ChangeSpanClass('S7',false)"> 
+					 <img src="./gen_images/Order3.gif" name="Order3" width="105" height="44" id="Order3" /> 
+				   </div>	  
+				 </td>
+			   </tr>
+			 <!-- Line Number 6 -->
+			   <tr>
+				 <td class="TextStyle">
+				   <div align="left" id="S7" style="cursor:pointer" 
+					 onclick="SendACommand('AC=acWorkPlanSPurchaseEntry')" 
+					 onmouseover="ChangeImageWhenMouseUp('Entry',true);ChangeSpanClass('S8',true)" 
+					 onmouseout="ChangeImageWhenMouseUp('Entry',false);ChangeSpanClass('S8',false)">
+					 <div align="center">Journal Entry
+					 </div>
+				   </div>
+				 </td>
+				 <td class="TextStyle">
+				   <div align="left" id="S9" style="cursor:pointer" 
+					 onclick="SendACommand('AC=acWorkPlanSPurchasePurchaseBill')" 
+					 onmouseover="ChangeImageWhenMouseUp('Bill',true);ChangeSpanClass('S9',true)" 
+					 onmouseout="ChangeImageWhenMouseUp('Bill',false);ChangeSpanClass('S9',false)">
+					 <div align="center">Purchase Invoice
+					 </div>
+				   </div>
+				 </td>
+				 <td class="TextStyle">
+				   <div align="center" id="S8" style="cursor:pointer" 
+					 onclick="SendACommand('AC=acWorkPlanSPurchaseOrder')" 
+					 onmouseover="ChangeImageWhenMouseUp('Order3',true);ChangeSpanClass('S7',true)" 
+					 onmouseout="ChangeImageWhenMouseUp('Order3',false);ChangeSpanClass('S7',false)">
+					 <div align="left">&nbsp;Purchase Order
+					 </div>
+				   </div>	  
+				 </td>
+			   </tr>
+			 <!-- Line Number 8 -->
+			   <tr>
+				 <td>&nbsp;</td>
+			   </tr>
+			   <tr height="48">
+				 <td valign="bottom">
+				   <div align="left" style="cursor:pointer" 
+					 onclick="SendACommand('AC=acWorkPlanSManufactureStoreMovement')" 
+					 onmouseover="ChangeImageWhenMouseUp('StockMovement2',true);ChangeSpanClass('S10',true)" 
+					 onmouseout="ChangeImageWhenMouseUp('StockMovement2',false);ChangeSpanClass('S10',false)">
+					 <img src="./gen_images/StockMovement2.gif" name="StockMovement2" width="60" height="60" id="StockMovement2" />
+				   </div>
+				 </td>
+			   </tr>
+			 <!-- Line Number 9 -->
+			   <tr>
+				 <td class="TextStyle">
+				   <div align="left" id="S10" style="cursor:pointer" 
+					 onclick="SendACommand('AC=acWorkPlanSManufactureStoreMovement')" 
+					 onmouseover="ChangeImageWhenMouseUp('StockMovement',true);ChangeSpanClass('S10',true)" 
+					 onmouseout="ChangeImageWhenMouseUp('StockMovement',false);ChangeSpanClass('S10',false)">Items transfer
+				   </div>
+				 </td>
+				 <td class="TextStyle"></td>
+			   </tr>
+			 <!-- Line Number 10 -->
+			   <tr>
+				 <td>&nbsp;</td>
+			   </tr>
+			 </table>
+		   </td>
+	  
+		   <td width="25" class="Spacer_Bar">&nbsp;</td>
+	  
+		   <td width="150" valign="top">
+			 <table width="100%" cellpadding="0" cellspacing="0">
+			 <!-- Line Number 1-->
+			   <tr height="10">
+				 <td>&nbsp;</td>
+			   </tr>
+	  
+			 <!-- Line Number 2-->
+			   <tr height="46">
+				 <td height="100%" align="center" valign="top" width="100">
+				   <div align="center" style="cursor:pointer" 
+					 onclick="SendACommand('AC=acWorkPlanSManufacturePickArticles')" 
+					 onmouseover="ChangeImageWhenMouseUp('BrowseArticle2',true);ChangeSpanClass('S12',true)" 
+					 onmouseout="ChangeImageWhenMouseUp('BrowseArticle2',false);ChangeSpanClass('S12',false)">
+					 <img src="./gen_images/BrowseArticle2.gif" name="BrowseArticle2" width="48" height="48" id="BrowseArticle2" />
+				   </div>
+				 </td>
+				 <td></td>
+			   </tr>
+	  
+			 <!-- Line Number 3-->
+			   <tr height="10">
+				 <td height="100%" align="center" valign="top" width="100">
+				   <div align="center" class="TextStyle" id="S12" style="cursor:pointer" 
+				   onclick="SendACommand('AC=acWorkPlanSManufacturePickArticles')" 
+				   onmouseover="ChangeImageWhenMouseUp('BrowseArticle2',true);ChangeSpanClass('S12',true)" 
+				   onmouseout="ChangeImageWhenMouseUp('BrowseArticle2',false);ChangeSpanClass('S12',false)">Browse Items
+				 </div>
+			   </td>
+			   <td></td>
+			 </tr>
+	  
+		   <!-- Line Number 4-->
+			 <tr>
+			   <td height="0">&nbsp;</td>  
+			 </tr>
+
+		   <!-- Line Number 5-->
+
+		   <!-- Line Number 6-->
+			 <tr height="10">
+			   <td></td>
+			   <td></td>
+			 </tr>
+	  
+		   <!-- Line Number 7-->
+			 <tr height="10">  </tr>
+	  
+		   <!-- Line Number 8-->
+			 <tr height="100%">
+			   <td colspan="2">
+				 <table height="100%" width="100%" cellspacing="0" cellpadding="0">
+	   
+				   <tr>
+					  <td width="30">
+						<div align="center" style="cursor:pointer" 
+						  onclick="SendACommand('AC=acWorkPlanSPurchaseWithdrawalFromVendor')" 
+						  onmouseover="ChangeImageWhenMouseUp('RepVendorPar',true);ChangeSpanClass('S31',true)" 
+						  onmouseout="ChangeImageWhenMouseUp('RepVendorPar',false);ChangeSpanClass('S31',false)"> 
+						  <img src="./gen_images/RepVendorPar.gif" name="RepVendorPar" width="30" height="22" id="RepVendorPar"/> 
+						</div>
+					  </td>
+					  <td class="TextStyle">
+						<div align="left" id="S31" class="TextStyle" style="cursor:pointer" 
+						  onclick="SendACommand('AC=acWorkPlanSPurchaseWithdrawalFromVendor')" 
+						  onmouseover="ChangeImageWhenMouseUp('RepVendorPar',true);ChangeSpanClass('S31',true)" 
+						  onmouseout="ChangeImageWhenMouseUp('RepVendorPar',false);ChangeSpanClass('S31',false)">Vendor withdrawal
+						</div>
+					  </td>
+				   </tr>
+	   
+				   <tr height="5">   </tr>
+	   
+				   <tr>
+					 <td width="30">
+					   <div align="center" style="cursor:pointer" 
+						 onclick="SendACommand('AC=acWorkPlanSPurchaseOrdersOfArticles')" 
+						 onmouseover="ChangeImageWhenMouseUp('RepOrder',true);ChangeSpanClass('S32',true)" 
+						 onmouseout="ChangeImageWhenMouseUp('RepOrder',false);ChangeSpanClass('S32',false)"> 
+						 <img src="./gen_images/RepOrder.gif" name="RepOrder" width="38" height="15" id="RepOrder"/> 
+					   </div>
+					 </td>
+					 <td class="TextStyle">
+					   <div align="left" class="TextStyle" id="S32" style="cursor:pointer" 
+						 onclick="SendACommand('AC=acWorkPlanSPurchaseOrdersOfArticles')" 
+						 onmouseover="ChangeImageWhenMouseUp('RepOrder',true);ChangeSpanClass('S32',true)" 
+						 onmouseout="ChangeImageWhenMouseUp('RepOrder',false);ChangeSpanClass('S32',false)">Items claims
+					   </div>
+					 </td>
+				   </tr>
+	   
+				   <tr height="5">   </tr>
+	   
+				   <tr>
+					 <td width="30">
+					   <div align="center" style="cursor:pointer" 
+						 onclick="SendACommand('AC=acWorkPlanSPurchasePurchaseBills')" 
+						 onmouseover="ChangeImageWhenMouseUp('RepBill2',true);ChangeSpanClass('S13',true)" 
+						 onmouseout="ChangeImageWhenMouseUp('RepBill2',false);ChangeSpanClass('S13',false)"> 
+						 <img src="./gen_images/RepBill2.gif" name="RepBill2" width="35" height="25" id="RepBill2" /> 
+					   </div>
+					 </td>
+					 <td class="TextStyle">
+					   <div align="left" id="S13" style="cursor:pointer" 
+						 onclick="SendACommand('AC=acWorkPlanSPurchasePurchaseBills')" 
+						 onmouseover="ChangeImageWhenMouseUp('RepBill2',true);ChangeSpanClass('S13',true)" 
+						 onmouseout="ChangeImageWhenMouseUp('RepBill2',false);ChangeSpanClass('S13',false)">Purchase Invoices
+					   </div>
+					 </td>
+				   </tr>
+	   
+				   <tr height="5">   </tr>
+		  
+				   <tr>
+					 <td width="30">
+					   <div align="center" class="TextStyle" style="cursor:pointer" 
+						 onclick="SendACommand('AC=acWorkPlanSPurchaseBrowseInventory')" 
+						 onmouseover="ChangeImageWhenMouseUp('RepInventory2',true);ChangeSpanClass('S14',true)" 
+						 onmouseout="ChangeImageWhenMouseUp('RepInventory2',false);ChangeSpanClass('S14',false)"> 
+						 <img src="./gen_images/RepInventory2.gif" name="RepInventory2" width="27" height="23" id="RepInventory2" /> 
+					   </div>
+					 </td>
+					 <td class="TextStyle">
+					   <div align="left" id="S14" class="TextStyle" style="cursor:pointer" 
+						 onclick="SendACommand('AC=acWorkPlanSPurchaseBrowseInventory')" 
+						 onmouseover="ChangeImageWhenMouseUp('RepInventory2',true);ChangeSpanClass('S14',true)" 
+						 onmouseout="ChangeImageWhenMouseUp('RepInventory2',false);ChangeSpanClass('S14',false)">Inventory
+					   </div>
+					 </td>
+				   </tr>
+
+				   <tr height="5">   </tr>
+		  
+					<tr>
+					  <td width="30">
+						<div align="center" class="TextStyle" style="cursor:pointer" 
+						  onclick="SendACommand('AC=acWorkPlanSPurchaseArticlesCard')" 
+						  onmouseover="ChangeImageWhenMouseUp('RepArticlesCard2',true);ChangeSpanClass('S15',true)" 
+						  onmouseout="ChangeImageWhenMouseUp('RepArticlesCard2',false);ChangeSpanClass('S15',false)"> 
+						  <img src="./gen_images/RepArticlesCard2.gif" name="RepArticlesCard2" width="27" height="21" id ="RepArticlesCard2"  /> 
+						</div>
+					  </td>
+					  <td class="TextStyle">
+						<div align="left" id="S15" class="TextStyle" style="cursor:pointer" 
+						  onclick="SendACommand('AC=acWorkPlanSPurchaseArticlesCard')" 
+						  onmouseover="ChangeImageWhenMouseUp('RepArticlesCard2',true);ChangeSpanClass('S15',true)" 
+						  onmouseout="ChangeImageWhenMouseUp('RepArticlesCard2',false);ChangeSpanClass('S15',false)">Items
+						</div>
+					  </td>
+					</tr>
+				  </table>   
+				</td>
+			  </tr>
+			</table>  
+		  </td>
+		</tr>
+	  </table>
+						</div>
+						<div class="modal" id="t31">
+						<table align="left" cellpadding="0" cellspacing="0" class="MainTable" dir="ltr">
+		<tr height="100%">
+		  <td width="10">&nbsp;</td>
+		  <td width="100" valign="top">
+			<table width="100%" cellpadding="0" cellspacing="0">
+			<!-- Line Number 1-->
+			  <tr height="10">
+				<td>&nbsp;</td>
+			  </tr>
+	  
+			<!-- Line Number 2-->
+			  <tr height="46">
+				<td height="100%" align="center" valign="top">
+				  <div align="center" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSManufactureNewArticle')" 
+					onmouseover="ChangeImageWhenMouseUp('NewArticle3',true);ChangeSpanClass('S1',true)" 
+					onmouseout="ChangeImageWhenMouseUp('NewArticle3',false);ChangeSpanClass('S1',false)"> 
+					<img src="./gen_images/NewArticle3.gif" name="NewArticle3" width="48" height="43" id="NewArticle3" /> 
+				  </div>
+				</td>
+			  </tr>
+	  
+			<!-- Line Number 3-->
+			  <tr height="10">
+				<td height="100%" align="center" valign="top">
+				  <div align="center" class="TextStyle" id="S1" style="cursor:pointer" 
+					onClick="SendACommand('AC=acWorkPlanSManufactureNewArticle')" 
+					onMouseOver="ChangeImageWhenMouseUp('NewArticle',true);ChangeSpanClass('S1',true)" 
+					onMouseOut="ChangeImageWhenMouseUp('NewArticle',false);ChangeSpanClass('S1',false)">Add new Item
+				  </div>
+				</td>
+			  </tr>
+	  
+			<!-- Line Number 4-->
+			  <tr>
+				<td height="59">&nbsp;</td>  
+			  </tr>
+	  
+			<!-- Line Number 5-->
+			  <tr height="46">
+				<td height="100%" align="center" valign="top">
+				  <div align="center" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSManufactureNewWarehouse')" 
+					onmouseover="ChangeImageWhenMouseUp('NewWarehouse3',true);ChangeSpanClass('S2',true)" 
+					onmouseout="ChangeImageWhenMouseUp('NewWarehouse3',false);ChangeSpanClass('S2',false)"> 
+					<img src="./gen_images/NewWarehouse3.gif" name="NewWarehouse3" width="48" height="43" id="NewWarehouse3" /> 
+				  </div>
+				</td>
+			  </tr>
+	  
+			<!-- Line Number 6-->
+			  <tr height="10">
+				<td height="100%" align="center" valign="top">
+				  <div align="center" class="TextStyle" id="S2" style="cursor:pointer" 
+					onClick="SendACommand('AC=acWorkPlanSManufactureNewWarehouse')" 
+					onMouseOver="ChangeImageWhenMouseUp('NewWarehouse',true);ChangeSpanClass('S2',true)" 
+					onMouseOut="ChangeImageWhenMouseUp('NewWarehouse',false);ChangeSpanClass('S2',false)">Add new store
+				  </div>
+				</td>
+			  </tr>
+		
+			<!-- Line Number 7-->
+			  <tr>
+				<td height="59">&nbsp;</td>  
+			  </tr>
+	 
+			<!-- Line Number 8-->
+			  <tr height="46">
+				<td height="100%" align="center" valign="top">
+				  <div align="center" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSManufactureNewFormula')" 
+					onmouseover="ChangeImageWhenMouseUp('NewMan',true);ChangeSpanClass('S3',true)" 
+					onmouseout="ChangeImageWhenMouseUp('NewMan',false);ChangeSpanClass('S3',false)"> 
+					<img src="./gen_images/NewMan.gif" name="NewMan" width="48" height="43" id="NewMan" /> 
+				  </div>
+				</td>
+			  </tr>
+	  
+			<!-- Line Number 9-->
+			  <tr height="10">
+				<td height="100%" align="center" valign="top">
+				  <div align="center" class="TextStyle" id="S3" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSManufactureNewFormula')" 
+					onmouseover="ChangeImageWhenMouseUp('NewMan',true);ChangeSpanClass('S3',true)" 
+					onmouseout="ChangeImageWhenMouseUp('NewMan',false);ChangeSpanClass('S3',false)">Add form
+				  </div>
+				</td>
+			  </tr>
+			</table>
+		  </td>
+	  
+		  <td width="25" class="Spacer_Bar">&nbsp;</td>
+		  <td width="390" valign="top">
+			<table width="100%" cellpadding="0" cellspacing="0">
+			<!-- Line Number 1 -->
+
+			<!-- Line Number 2 -->
+			  <tr>
+				<td class="TextStyle"  colspan="3"  id="S6">
+				  <div align="center" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSManufactureTreatFormula')" 
+					onmouseover="ChangeImageWhenMouseUp('Man',true);ChangeSpanClass('S6',true)" 
+					onmouseout="ChangeImageWhenMouseUp('Man',false);ChangeSpanClass('S6',false)">Manifacturing Process
+				  </div>
+				</td>
+			  </tr>
+			  <tr>
+				<td class="TextStyle" align="center" colspan="3">
+				  <div align="center" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSManufactureTreatFormula')" 
+					onmouseover="ChangeImageWhenMouseUp('Man',true);ChangeSpanClass('S6',true)" 
+					onmouseout="ChangeImageWhenMouseUp('Man',false);ChangeSpanClass('S6',false)">
+					<img src="./gen_images/Man.gif" name="Man" width="206" height="120" vspace="4" id="Man" />
+				  </div>
+				</td>  
+			  </tr>
+
+			<!-- Line Number 3 -->
+			  <tr>  </tr>
+	  
+			<!-- Line Number 4 -->
+	  
+			<!-- Line Number 5 -->
+			  <tr>  </tr>
+
+			<!-- Line Number 6 -->
+			  <tr>
+				<td class="TextStyle" id="S61">
+				  <div align="center" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSManufactureGoodsIn')" 
+					onmouseover="ChangeToImageWhenMouseUp('ManMed','ManMed2_up',true);ChangeSpanClass('S61',true)" 
+					onmouseout="ChangeToImageWhenMouseUp('ManMed','ManMed2_up',false);ChangeSpanClass('S61',false)">Ready-Made Goods
+				  </div>
+				</td>
+				<td></td>  
+				<td class="TextStyle" id="S60">
+				  <div align="left" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSManufactureRowMaterialOut')" 
+					onmouseover="ChangeToImageWhenMouseUp('ManMed','ManMed1_up',true);ChangeSpanClass('S60',true)" 
+					onmouseout="ChangeToImageWhenMouseUp('ManMed','ManMed1_up',false);ChangeSpanClass('S60',false)">Output Raw Materials (for Manufacturing)
+				  </div>
+				</td>
+			  </tr>
+	  
+			<!-- Line Number 7 -->
+			  <tr>
+				<td colspan="3">
+				  <div align="center" style="cursor:pointer"> 
+					<img src="./gen_images/ManMed.gif" name="ManMed" width="271" height="120" border="0" usemap="#Map" id="ManMed" />
+					<map name="Map" id="Map">
+					  <area shape="rect"  coords="229,0,278,46" href="#" style="cursor:pointer" 
+						onclick="SendACommand('AC=acWorkPlanSManufactureGoodsIn')" 
+						onmouseover="ChangeToImageWhenMouseUp('ManMed','ManMed1_up',true);ChangeSpanClass('S60',true)" 
+						onmouseout="ChangeToImageWhenMouseUp('ManMed','ManMed1_up',false);ChangeSpanClass('S60',false)"/>
+					  <area shape="rect" coords="0,0,44,45" href="#" style="cursor:pointer" 
+						onclick="SendACommand('AC=acWorkPlanSManufactureRowMaterialOut')" 
+						onmouseover="ChangeToImageWhenMouseUp('ManMed','ManMed2_up',true);ChangeSpanClass('S61',true)" 
+						onmouseout="ChangeToImageWhenMouseUp('ManMed','ManMed2_up',false);ChangeSpanClass('S61',false)"/>
+					</map>
+				  </div>
+				  <div align="center" id="S9" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSSaleSaleBill')" 
+					onmouseover="ChangeImageWhenMouseUp('Bill3',true);ChangeSpanClass('S9',true)" 
+					onmouseout="ChangeImageWhenMouseUp('Bill3',false);ChangeSpanClass('S9',false)">
+				  </div>  
+				</td>
+			  </tr>
+	  
+			<!-- Line Number 8 -->
+			  <tr height="0">
+				<td valign="bottom">
+				  <div align="left" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSManufactureStoreMovement')" 
+					onmouseover="ChangeImageWhenMouseUp('StockMovement3',true);ChangeSpanClass('S10',true)" 
+					onmouseout="ChangeImageWhenMouseUp('StockMovement3',false);ChangeSpanClass('S10',false)">
+					<img src="./gen_images/StockMovement3.gif" name="StockMovement3" width="60" height="60" id="StockMovement3" />
+				  </div>
+				</td>
+				<td valign="top">
+				  <div align="right" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSManufactureEntry')" 
+					onmouseover="ChangeImageWhenMouseUp('Entry4',true);ChangeSpanClass('S11',true)" 
+					onmouseout="ChangeImageWhenMouseUp('Entry4',false);ChangeSpanClass('S11',false)">
+					<img src="./gen_images/Entry4.gif" name="Entry4" width="75" height="75" hspace="60"  id="Entry4" />   
+				  </div>  
+				</td>
+			  </tr>
+	  
+			<!-- Line Number 9 -->
+			  <tr>
+				<td class="TextStyle">
+				  <div align="left" id="S10" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSManufactureStoreMovement')"
+					onmouseover="ChangeImageWhenMouseUp('StockMovement',true);ChangeSpanClass('S10',true)" 
+					onmouseout="ChangeImageWhenMouseUp('StockMovement',false);ChangeSpanClass('S10',false)">Items transfer
+				  </div>
+				</td>
+				<td class="TextStyle">
+				  <div align="center" id="S11" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSManufactureEntry')" 
+					onmouseover="ChangeImageWhenMouseUp('Entry',true);ChangeSpanClass('S11',true)" 
+					onmouseout="ChangeImageWhenMouseUp('Entry',false);ChangeSpanClass('S11',false)">Journal Entry
+				  </div>
+				</td>
+			  </tr>
+	  
+			<!-- Line Number 10 -->
+			  <tr>
+				<td>&nbsp;</td>
+			  </tr>
+			</table>
+		  </td>
+	  
+		  <td width="25" class="Spacer_Bar">&nbsp;</td>
+	  
+		  <td width="150" valign="top">
+			<table width="100%" cellpadding="0" cellspacing="0">
+			<!-- Line Number 1-->
+			  <tr height="10">
+				<td>&nbsp;</td>
+			  </tr>
+	  
+			<!-- Line Number 2-->
+			  <tr height="46">
+				<td height="100%" align="center" valign="top" width="100">
+				  <div align="center" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSManufacturePickArticles')" 
+					onmouseover="ChangeImageWhenMouseUp('BrowseArticle3',true);ChangeSpanClass('S12',true)" 
+					onmouseout="ChangeImageWhenMouseUp('BrowseArticle3',false);ChangeSpanClass('S12',false)">
+					<img src="./gen_images/BrowseArticle3.gif" name="BrowseArticle3" width="48" height="48" id="BrowseArticle3" />
+				  </div>
+				</td>
+				<td></td>
+			  </tr>
+	  
+			<!-- Line Number 3-->
+			  <tr height="10">
+				<td height="100%" align="center" valign="top" width="100">
+				  <div align="center" class="TextStyle" id="S12" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSManufacturePickArticles')" 
+					onmouseover="ChangeImageWhenMouseUp('BrowseArticle3',true);ChangeSpanClass('S12',true)" 
+					onmouseout="ChangeImageWhenMouseUp('BrowseArticle3',false);ChangeSpanClass('S12',false)">Browse Items
+				  </div>
+				</td>
+				<td></td>
+			  </tr>
+	  
+			<!-- Line Number 4-->
+			  <tr>
+				<td height="0">&nbsp;</td>  
+			  </tr>
+
+			<!-- Line Number 5-->
+			  <tr height="46">
+				<td height="100%" align="center" valign="top" width="100">
+				  <div align="center" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSManufacturePickManufaturing')" 
+					onmouseover="ChangeImageWhenMouseUp('BrowseMan',true);ChangeSpanClass('S70',true)" 
+					onmouseout="ChangeImageWhenMouseUp('BrowseMan',false);ChangeSpanClass('S70',false)">
+					<img src="./gen_images/BrowseMan.gif" name="BrowseMan" width="48" height="48" id="BrowseMan" />
+				  </div>
+				</td>
+				<td></td>
+			  </tr>
+
+			<!-- Line Number 6-->
+			  <tr height="10">
+				<td height="100%" align="center" valign="top" width="100">
+				  <div align="center" class="TextStyle" id="S70" style="cursor:pointer" 
+					onclick="SendACommand('AC=acWorkPlanSManufacturePickManufaturing')" 
+					onmouseover="ChangeImageWhenMouseUp('BrowseMan',true);ChangeSpanClass('S70',true)" 
+					onmouseout="ChangeImageWhenMouseUp('BrowseMan',false);ChangeSpanClass('S70',false)">View Manufacture Forms
+				  </div>
+				</td>
+				<td></td>
+			  </tr>
+	  
+			<!-- Line Number 7-->
+			  <tr height="10">  </tr>
+	  
+			<!-- Line Number 8-->
+			  <tr height="100%">
+				<td>
+				  <table height="100%" width="100%" cellspacing="0" cellpadding="0">
+	   
+					<tr>
+					  <td width="30">
+						<div align="center" style="cursor:pointer" 
+						  onclick="SendACommand('AC=acWorkPlanSManufactureFormulas')" 
+						  onmouseover="ChangeImageWhenMouseUp('RepMan',true);ChangeSpanClass('S30',true)" 
+						  onmouseout="ChangeImageWhenMouseUp('RepMan',false);ChangeSpanClass('S30',false)">
+						  <img src="./gen_images/RepMan.gif" name="RepMan" width="22" height="22" id="RepCustomerSales"/>
+						</div>
+					  </td>
+					  <td class="TextStyle">
+						<div align="left" id="S30" style="cursor:pointer" 
+						  onclick="SendACommand('AC=acWorkPlanSManufactureFormulas')" 
+						  onmouseover="ChangeImageWhenMouseUp('RepMan',true);ChangeSpanClass('S30',true)" 
+						  onmouseout="ChangeImageWhenMouseUp('RepMan',false);ChangeSpanClass('S30',false)">Manufacturing Patterns
+						</div>
+					  </td>
+					</tr>
+	   
+					<tr height="5">   </tr>
+	   
+					<tr>
+					  <td width="30">
+						<div align="center" style="cursor:pointer" 
+						  onclick="SendACommand('AC=acWorkPlanSManufactureExpectedFormulas')" 
+						  onmouseover="ChangeImageWhenMouseUp('RepExpected',true);ChangeSpanClass('S31',true)" 
+						  onmouseout="ChangeImageWhenMouseUp('RepExpected',false);ChangeSpanClass('S31',false)"> 
+						  <img src="./gen_images/RepExpected.gif" name="RepExpected" width="27" height="22" id="RepExpected"/> 
+						</div>
+					  </td>
+					  <td class="TextStyle">
+						<div align="left" id="S31" class="TextStyle" style="cursor:pointer" 
+						  onclick="SendACommand('AC=acWorkPlanSManufactureExpectedFormulas')" 
+						  onmouseover="ChangeImageWhenMouseUp('RepExpected',true);ChangeSpanClass('S31',true)" 
+						  onmouseout="ChangeImageWhenMouseUp('RepExpected',false);ChangeSpanClass('S31',false)">Expected Forms
+						</div>
+					  </td>
+					</tr>
+	   
+					<tr height="5">   </tr>
+	   
+					<tr>
+					  <td width="30">
+						<div align="center" style="cursor:pointer" 
+						  onclick="SendACommand('AC=acWorkPlanSManufactureRequiredMaterials')" 
+						  onmouseover="ChangeImageWhenMouseUp('RepAriclesMan',true);ChangeSpanClass('S32',true)" 
+						  onmouseout="ChangeImageWhenMouseUp('RepAriclesMan',false);ChangeSpanClass('S32',false)"> 
+						  <img src="./gen_images/RepAriclesMan.gif" name="RepAriclesMan" width="22" height="18" id="RepAriclesMan"/> 
+						</div>
+					  </td>
+					  <td class="TextStyle">
+						<div align="left" class="TextStyle" id="S32" style="cursor:pointer" 
+						  onclick="SendACommand('AC=acWorkPlanSManufactureRequiredMaterials')" 
+						  onmouseover="ChangeImageWhenMouseUp('RepAriclesMan',true);ChangeSpanClass('S32',true)" 
+						  onmouseout="ChangeImageWhenMouseUp('RepAriclesMan',false);ChangeSpanClass('S32',false)">Required Raw Materials to Make a Form
+						</div>
+					  </td>
+					</tr>
+	   
+					<tr height="5">   </tr>
+		  
+					<tr>
+					  <td width="30">
+						<div align="center" class="TextStyle" style="cursor:pointer" 
+						  onclick="SendACommand('AC=acWorkPlanSManufactureInventory')" 
+						  onmouseover="ChangeImageWhenMouseUp('RepInventory3',true);ChangeSpanClass('S14',true)" 
+						  onmouseout="ChangeImageWhenMouseUp('RepInventory3',false);ChangeSpanClass('S14',false)"> 
+						  <img src="./gen_images/RepInventory3.gif" name="RepInventory3" width="27" height="23" id="RepInventory3" /> 
+						</div>
+					  </td>
+					  <td class="TextStyle">
+						<div align="left" id="S14" class="TextStyle" style="cursor:pointer" 
+						  onclick="SendACommand('AC=acWorkPlanSManufactureInventory')" 
+						  onmouseover="ChangeImageWhenMouseUp('RepInventory3',true);ChangeSpanClass('S14',true)" 
+						  onmouseout="ChangeImageWhenMouseUp('RepInventory3',false);ChangeSpanClass('S14',false)">Inventory
+						</div>
+					  </td>
+					</tr>
+
+					<tr height="5">   </tr>
+		  
+					<tr>
+					  <td width="30">
+						<div align="center" class="TextStyle" style="cursor:pointer" 
+						  onclick="SendACommand('AC=acWorkPlanSManufactureArticleCard')" 
+						  onmouseover="ChangeImageWhenMouseUp('RepArticlesCard3',true);ChangeSpanClass('S15',true)" 
+						  onmouseout="ChangeImageWhenMouseUp('RepArticlesCard3',false);ChangeSpanClass('S15',false)"> 
+						  <img src="./gen_images/RepArticlesCard3.gif" name="RepArticlesCard3" width="27" height="21" id= "RepArticlesCard3" /> 
+						</div>
+					  </td>
+					  <td class="TextStyle">
+						<div align="left" id="S15" class="TextStyle" style="cursor:pointer" 
+						  onclick="SendACommand('AC=acWorkPlanSManufactureArticleCard')" 
+						  onmouseover="ChangeImageWhenMouseUp('RepArticlesCard3',true);ChangeSpanClass('S15',true)" 
+						  onmouseout="ChangeImageWhenMouseUp('RepArticlesCard3',false);ChangeSpanClass('S15',false)">Items
+						</div>
+					  </td>
+					</tr>
+	   
+				  </table>   
+				</td>
+			  </tr>
+			</table>
+		  </td>
+		</tr>
+	  </table>
+						</div>
+			  </div>
+			   
+			</div>
+		  </div>
+	  </div>
+	</div>
+		  <!--tabs-->
+		 
+		</div>
+		 
+
+ <!--watch out-->
+ 
+ 
+
+
+  
+	<!-- script references -->
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.js"></script> 
+		<script src="js/scripts.js"></script>  
+		<script src="js/jquery-ui.js"> </script>
+		<script src="js/Prog_AR.js"> </script> 
+		<script src="js/en_menu.js"> </script>
+		<!--<script src="js/bootstrap-toggle.js"> </script> -->
+		<script src="js/ripples.min.js"></script>
+        <script src="js/material.min.js"></script>
+		   <script>
+               $(document).ready(function () {
+                   // This command is used to initialize some elements and make them work properly
+                   $.material.init();
+                   local.set("WindowWidth", $(window).width())
+                   $(function () {
+                       $("#favoriteslist").resizable({
+                          // grid: [ 20, 10 ],
+                           stop: function (event, ui) { 
+                               SendACommand("AC=acSaveOffset," + ui.size.width + "/" + ui.size.height + "," + "ac=width/0000");
+                               setTimeout(function () {
+                                   var $drag = $('.drg');
+                                   for (var i = 0; i < $drag.length; i++) {
+                                       setTimeout(function (elem) {
+                                           SendACommand("AC=acSaveOffset," + $(elem[0][elem[1]]).offset().top + "/" + $(elem[0][elem[1]]).offset().left + "," + elem[0][elem[1]].attributes["data"].value)
+                                       }, 100, [$drag, i]);
+                                   }
+                               }, 500);
+                              
+                           },
+                           start: function (event, ui) { 
+                               var $drag = $('.drg'); 
+                               for (var i = 0; i < $drag.length; i++) {
+                                   $($drag[i]).css("top", "0px");
+                                   $($drag[i]).css("left", "0px"); 
+                               }
+                       }
+                            
+                       });
+                   }); 
+                   $(window).resize(function () {
+                       var temp = $(window).width();
+                    //console.log(temp + " " + local.get("	"))
+                    if (local.get("WindowWidth") != temp && Number.isInteger(local.get("WindowWidth"))) {
+                        //console.log(this.innerWidth + "ttt");
+                        $("#favoriteslist").css("width", "");
+                    } 
+                    local.set("WindowWidth", $(window).width());
+                    var $drag = $('.drg');
+                    for (var i = 0; i < $drag.length; i++) {
+                        $($drag[i]).css("top", "0px");
+                        $($drag[i]).css("left", "0px");
+                    }
+                   });
+               });
+        </script>
+	</body>
+</html>
